@@ -1,65 +1,566 @@
 
+
+```html
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portal Premium</title>
 
-<link rel="stylesheet" href="./css/style.css">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FARC-EP Frente 36 Arnulfo Castellanos</title>
+
+<!-- GOOGLE FONTS -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
+
+<!-- =========================================================
+LOADER
+========================================================= -->
+
+<div id="loader">
+
+<div class="loader-overlay"></div>
+
+<div class="loader-content">
+
+<img
+src="assets/logo/logo.png"
+class="loader-logo"
+>
+
+<h1>FARC-EP</h1>
+
+<p>FRENTE 36</p>
+
+<div class="loader-bar">
+
+<div class="loader-progress"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =========================================================
+INTRO MUSIC
+========================================================= -->
+
+<audio id="introMusic" loop>
+
+<source
+src="assets/music/intro.mp3"
+type="audio/mpeg"
+>
+
+</audio>
+
+<!-- =========================================================
+HEADER
+========================================================= -->
 
 <header class="header">
 
 <div class="logo">
-PORTAL PREMIUM
+
+<img src="assets/logo/logo.png">
+
+<div class="logo-text">
+
+<h1>FARC-EP</h1>
+
+<p>FRENTE 36</p>
+
+<span>ARNULFO CASTELLANOS</span>
+
 </div>
 
-<nav>
-<a href="#">Inicio</a>
-<a href="#">Galería</a>
-<a href="#">Comunicados</a>
-<a href="#">Mujeres</a>
-<a href="#">Videos</a>
-<a href="#">Libros</a>
+</div>
+
+<button class="menu-btn" id="menu-btn">
+
+☰
+
+</button>
+
+<nav class="nav" id="nav">
+
+<a data-section="inicio">Inicio</a>
+
+<a data-section="comunicados">Comunicados</a>
+
+<a data-section="mujeres">Mujeres</a>
+
+<a data-section="galeria">Galería</a>
+
+<a data-section="musica">Música</a>
+
+<a data-section="videos">Videos</a>
+
+<a data-section="blog">Blog</a>
+
+<a data-section="recomendados">Recomendados</a>
+
 </nav>
 
 </header>
 
-<section class="hero">
+<!-- =========================================================
+INICIO
+========================================================= -->
+<!-- =========================================================
+INICIO
+========================================================= -->
+
+<section class="section active" id="inicio">
+
+<div class="hero">
+
+<!-- VIDEO -->
+
+<video
+class="hero-video"
+autoplay
+muted
+loop
+playsinline
+>
+
+<source
+src="assets/uploads/intro-video.mp4"
+type="video/mp4"
+>
+
+</video>
+
+<!-- IMAGEN -->
+
+<img
+src="assets/hero/hero.jpg"
+class="hero-img"
+>
+
+<!-- OVERLAY -->
 
 <div class="overlay"></div>
 
+<!-- PARTICLES -->
+
+<div class="particles"></div>
+
+<!-- HERO CONTENT -->
+
 <div class="hero-content">
-<h1>PORTAL PREMIUM</h1>
-<p>Plataforma cinematográfica editorial</p>
-<button>EXPLORAR</button>
+
+<h1>
+
+FARC-EP FRENTE 36
+
+</h1>
+
+<h2 class="sub-hero">
+
+ARNULFO CASTELLANOS
+
+</h2>
+
+<p>
+
+Memoria histórica, territorio, cultura y procesos comunitarios.
+
+</p>
+
+</div>
+
 </div>
 
 </section>
 
-<section class="cards">
+<!-- =========================================================
+COMUNICADOS
+========================================================= -->
+
+<section class="section" id="comunicados">
+
+<div class="section-bg">
+
+<img src="assets/hero/bg-comunicados.jpg">
+
+<div class="section-overlay"></div>
+
+</div>
+
+<div class="internal-page">
+
+<h2 class="page-title">
+
+COMUNICADOS
+
+</h2>
+
+<div class="grid">
 
 <div class="card">
-<h2>Comunicados</h2>
-<p>Noticias y publicaciones oficiales.</p>
+
+<img src="assets/uploads/foto1.jpg">
+
+<h3>Comunicado Oficial</h3>
+
+<p>
+
+Publicaciones organizadas visualmente.
+
+</p>
+
 </div>
 
 <div class="card">
-<h2>Mujeres Luchadoras</h2>
-<p>Historias y memoria.</p>
+
+<img src="assets/uploads/foto2.jpg">
+
+<h3>Archivo Histórico</h3>
+
+<p>
+
+Contenido documental multimedia.
+
+</p>
+
 </div>
 
 <div class="card">
-<h2>Galería</h2>
-<p>Fotografía documental premium.</p>
+
+<img src="assets/uploads/foto3.jpg">
+
+<h3>Declaraciones</h3>
+
+<p>
+
+la voz del pueblo.
+
+</p>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
 
-<script src="./js/app.js"></script>
+<!-- =========================================================
+MUJERES
+========================================================= -->
+
+<section class="section" id="mujeres">
+
+<div class="section-bg">
+
+<img src="assets/hero/bg-mujeres.jpg">
+
+<div class="section-overlay"></div>
+
+</div>
+
+<div class="internal-page">
+
+<h2 class="page-title">
+
+MUJERES
+
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<img src="assets/uploads/foto1.jpg">
+
+<h3>Memoria Visual</h3>
+
+<p>
+
+Archivo visual documental.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="assets/uploads/foto2.jpg">
+
+<h3>Historia</h3>
+
+<p>
+
+Registro multimedia histórico.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================================================
+GALERIA
+========================================================= -->
+
+<section class="section" id="galeria">
+
+<div class="section-bg">
+
+<img src="assets/hero/bg-galeria.jpg">
+
+<div class="section-overlay"></div>
+
+</div>
+
+<div class="internal-page">
+
+<h2 class="page-title">
+
+GALERÍA
+
+</h2>
+
+<div class="gallery-grid">
+
+<img src="assets/uploads/foto1.jpg">
+<img src="assets/uploads/foto2.jpg">
+<img src="assets/uploads/foto3.jpg">
+<img src="assets/uploads/foto1.jpg">
+<img src="assets/uploads/foto2.jpg">
+<img src="assets/uploads/foto3.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================================================
+MUSICA
+========================================================= -->
+
+<section class="section" id="musica">
+
+<div class="section-bg">
+
+<img src="assets/hero/bg-musica.jpg">
+
+<div class="section-overlay"></div>
+
+</div>
+
+<div class="internal-page">
+
+<h2 class="page-title">
+
+MÚSICA
+
+</h2>
+
+<div class="music-grid">
+
+<div class="music-card">
+
+<img src="assets/uploads/cover1.jpg">
+
+<h3>Himno-FARC-EP</h3>
+
+<audio controls>
+
+<source
+src="assets/uploads/Himno-FARC-EP.mp3"
+type="audio/mpeg"
+>
+
+</audio>
+
+</div>
+
+<div class="music-card">
+
+<img src="assets/uploads/cover2.jpg">
+
+<h3>Campesino Embejucao</h3>
+
+<audio controls>
+
+<source
+src="assets/uploads/el-campesino-embejucado.mp3"
+type="audio/mpeg"
+>
+
+</audio>
+
+</div>
+
+<div class="music-card">
+
+<h3>Canción Revolucionaria</h3>
+
+<audio controls>
+
+<source
+src="assets/uploads/audio2.mp3"
+type="audio/mpeg"
+>
+
+</audio>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================================================
+VIDEOS
+========================================================= -->
+
+<section class="section" id="videos">
+
+<div class="section-bg">
+
+<img src="assets/hero/bg-videos.jpg">
+
+<div class="section-overlay"></div>
+
+</div>
+
+<div class="internal-page">
+
+<h2 class="page-title">
+
+VIDEOS
+
+</h2>
+
+<div class="video-grid">
+
+<div class="video-card">
+
+<video controls>
+
+<source
+src="assets/uploads/surgimiento-de-las-farcep.mp4"
+type="video/mp4"
+>
+
+</video>
+
+<h3>Surgimiento Histórico</h3>
+
+</div>
+
+<div class="video-card">
+
+<video controls>
+
+<source
+src="assets/uploads/video-historia.mp4"
+type="video/mp4"
+>
+
+</video>
+
+<h3>Historia Frente 36</h3>
+
+</div>
+
+<div class="video-card">
+
+<video controls>
+
+<source
+src="assets/uploads/surgimiento-de-las-farcep.mp4"
+type="video/mp4"
+>
+
+</video>
+
+<h3>Documental</h3>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================================================
+FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+© 2026 FARC-EP Frente 36 Arnulfo Castellanos
+
+</footer>
+
+<!-- =========================================================
+FLOATING PLAYER
+========================================================= -->
+
+<div class="floating-player">
+
+<button id="music-toggle">
+
+🔊 Música
+
+</button>
+
+<input
+type="range"
+id="volumeControl"
+min="0"
+max="1"
+step="0.1"
+value="0.5"
+>
+
+</div>
+
+<!-- =========================================================
+BACK BUTTON
+========================================================= -->
+
+<button
+class="back-btn"
+onclick="goBack()">
+
+⬅
+
+</button>
+
+<!-- JS -->
+
+<script src="js/app.js"></script>
 
 </body>
 </html>
+```
