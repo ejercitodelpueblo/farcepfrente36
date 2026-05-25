@@ -11,22 +11,16 @@ collections:
     label: "Blog"
     folder: "content/blog"
     create: true
-
     slug: "{{slug}}"
 
     fields:
+      - label: "Título"
+        name: "title"
+        widget: "string"
 
-      - {
-          label: "Título",
-          name: "title",
-          widget: "string"
-        }
-
-      - {
-          label: "Contenido",
-          name: "body",
-          widget: "markdown"
-        }
+      - label: "Contenido"
+        name: "body"
+        widget: "markdown"
 
   - name: "comunicados"
     label: "Comunicados"
@@ -34,24 +28,17 @@ collections:
     create: true
 
     fields:
+      - label: "Título"
+        name: "title"
+        widget: "string"
 
-      - {
-          label: "Título",
-          name: "title",
-          widget: "string"
-        }
+      - label: "Imagen"
+        name: "image"
+        widget: "image"
 
-      - {
-          label: "Imagen",
-          name: "image",
-          widget: "image"
-        }
-
-      - {
-          label: "Contenido",
-          name: "body",
-          widget: "markdown"
-        }
+      - label: "Contenido"
+        name: "body"
+        widget: "markdown"
 
   - name: "galeria"
     label: "Galería"
@@ -59,12 +46,9 @@ collections:
     create: true
 
     fields:
-
-      - {
-          label: "Imagen",
-          name: "image",
-          widget: "image"
-        }
+      - label: "Imagen"
+        name: "image"
+        widget: "image"
 
   - name: "musica"
     label: "Música"
@@ -72,24 +56,17 @@ collections:
     create: true
 
     fields:
+      - label: "Título"
+        name: "title"
+        widget: "string"
 
-      - {
-          label: "Título",
-          name: "title",
-          widget: "string"
-        }
+      - label: "Portada"
+        name: "cover"
+        widget: "image"
 
-      - {
-          label: "Portada",
-          name: "cover",
-          widget: "image"
-        }
-
-      - {
-          label: "Audio",
-          name: "audio",
-          widget: "file"
-        }
+      - label: "Audio"
+        name: "audio"
+        widget: "file"
 
   - name: "videos"
     label: "Videos"
@@ -97,21 +74,14 @@ collections:
     create: true
 
     fields:
+      - label: "Título"
+        name: "title"
+        widget: "string"
 
-      - {
-          label: "Título",
-          name: "title",
-          widget: "string"
-        }
+      - label: "Video"
+        name: "video"
+        widget: "file"
 
-      - {
-          label: "Video",
-          name: "video",
-          widget: "file"
-        }
-
-      - {
-          label: "Miniatura",
-          name: "thumbnail",
-          widget: "image"
-        }
+      - label: "Miniatura"
+        name: "thumbnail"
+        widget: "image"
