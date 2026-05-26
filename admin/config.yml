@@ -1,87 +1,23 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: nuevojulio2025-hash/farc-ep-frente36
   branch: main
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
+  - name: "posts"
+    label: "Publicaciones"
+    folder: "content/posts"
     create: true
     slug: "{{slug}}"
 
     fields:
-      - label: "Título"
-        name: "title"
-        widget: "string"
+      - { label: "Titulo", name: "title", widget: "string" }
 
-      - label: "Contenido"
-        name: "body"
-        widget: "markdown"
+      - { label: "Fecha", name: "date", widget: "datetime" }
 
-  - name: "comunicados"
-    label: "Comunicados"
-    folder: "content/comunicados"
-    create: true
+      - { label: "Imagen", name: "image", widget: "image" }
 
-    fields:
-      - label: "Título"
-        name: "title"
-        widget: "string"
-
-      - label: "Imagen"
-        name: "image"
-        widget: "image"
-
-      - label: "Contenido"
-        name: "body"
-        widget: "markdown"
-
-  - name: "galeria"
-    label: "Galería"
-    folder: "content/galeria"
-    create: true
-
-    fields:
-      - label: "Imagen"
-        name: "image"
-        widget: "image"
-
-  - name: "musica"
-    label: "Música"
-    folder: "content/musica"
-    create: true
-
-    fields:
-      - label: "Título"
-        name: "title"
-        widget: "string"
-
-      - label: "Portada"
-        name: "cover"
-        widget: "image"
-
-      - label: "Audio"
-        name: "audio"
-        widget: "file"
-
-  - name: "videos"
-    label: "Videos"
-    folder: "content/videos"
-    create: true
-
-    fields:
-      - label: "Título"
-        name: "title"
-        widget: "string"
-
-      - label: "Video"
-        name: "video"
-        widget: "file"
-
-      - label: "Miniatura"
-        name: "thumbnail"
-        widget: "image"
+      - { label: "Contenido", name: "body", widget: "markdown" }
