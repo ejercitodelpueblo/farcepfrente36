@@ -1,5 +1,5 @@
 ---
-title: El campesino embejucado
+title: madre del guerrillero
 cover: /assets/uploads/surgimiento.webp
-audio: /assets/uploads/el-campesino-embejucado.mp3
+audio: /assets/uploads/madre-del-guerrillero.mp3
 ---
