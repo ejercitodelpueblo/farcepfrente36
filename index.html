@@ -1,23 +1,28 @@
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FARC-EP Frente 36 Arnulfo Castellanos</title>
-    <!-- FUENTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- ESTA LÍNEA ES LA CLAVE DEL DISEÑO -->
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", function(user) {
+                if (!user) {
+                    window.netlifyIdentity.on("login", function() { document.location.href = "/admin/"; });
+                    window.netlifyIdentity.on("recovery", function() { document.location.href = "/admin/"; });
+                }
+            });
+        }
+    </script>
 
-    <!-- LOADER -->
     <div id="loader">
         <div class="loader-overlay"></div>
         <div class="loader-content">
@@ -28,7 +33,6 @@
         </div>
     </div>
 
-    <!-- HEADER -->
     <header class="header">
         <div class="logo">
             <img src="público/logo/logo.png">
@@ -51,7 +55,6 @@
         </nav>
     </header>
 
-    <!-- INICIO -->
     <section class="section active" id="inicio">
         <div class="hero">
             <img src="público/imagenes/foto1.jpg" class="hero-img">
@@ -65,46 +68,43 @@
         </div>
     </section>
 
-    <!-- SECCIONES -->
     <section class="section" id="comunicados">
-        <div class="section-bg"><img src="público/imagenes/foto1.jpg"></div>
+        <div class="section-bg"><img src="público/imagenes/foto1.jpg"><div class="section-overlay"></div></div>
         <div class="internal-page"><h2 class="page-title">COMUNICADOS</h2><div class="grid" id="comunicados-container"></div></div>
     </section>
 
     <section class="section" id="mujeres">
-        <div class="section-bg"><img src="público/imagenes/foto2.jpg"></div>
+        <div class="section-bg"><img src="público/imagenes/foto2.jpg"><div class="section-overlay"></div></div>
         <div class="internal-page"><h2 class="page-title">MUJERES</h2><div class="grid" id="mujeres-container"></div></div>
     </section>
 
     <section class="section" id="galeria">
-        <div class="section-bg"><img src="público/imagenes/foto3.jpg"></div>
+        <div class="section-bg"><img src="público/imagenes/foto3.jpg"><div class="section-overlay"></div></div>
         <div class="internal-page"><h2 class="page-title">GALERÍA</h2><div class="gallery-grid" id="galeria-container"></div></div>
     </section>
 
     <section class="section" id="Musica">
-        <div class="section-bg"><img src="público/imagenes/foto1.jpg"></div>
+        <div class="section-bg"><img src="público/imagenes/foto1.jpg"><div class="section-overlay"></div></div>
         <div class="internal-page"><h2 class="page-title">MÚSICA</h2><div class="music-grid" id="musica-container"></div></div>
     </section>
 
     <section class="section" id="Videos">
-        <div class="section-bg"><img src="público/imagenes/foto2.jpg"></div>
+        <div class="section-bg"><img src="público/imagenes/foto2.jpg"><div class="section-overlay"></div></div>
         <div class="internal-page"><h2 class="page-title">VIDEOS</h2><div class="video-grid" id="videos-container"></div></div>
     </section>
 
     <section class="section" id="blog">
-        <div class="section-bg"><img src="público/imagenes/foto3.jpg"></div>
+        <div class="section-bg"><img src="público/imagenes/foto3.jpg"><div class="section-overlay"></div></div>
         <div class="internal-page"><h2 class="page-title">BLOG</h2><div class="grid" id="blog-container"></div></div>
     </section>
 
     <section class="section" id="recomendados">
-        <div class="section-bg"><img src="público/imagenes/foto1.jpg"></div>
+        <div class="section-bg"><img src="público/imagenes/foto1.jpg"><div class="section-overlay"></div></div>
         <div class="internal-page"><h2 class="page-title">RECOMENDADOS</h2><div class="grid" id="recomendados-container"></div></div>
     </section>
 
     <footer class="footer">© 2026 FARC-EP Frente 36 Yeferson Martinez</footer>
     <button class="back-btn" onclick="goBack()">⬅</button>
-    
-    <!-- JS -->
     <script src="js/app.js"></script>
 </body>
 </html>
