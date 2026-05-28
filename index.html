@@ -10,8 +10,130 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- CSS -->
+   <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARC-EP Frente 36 Arnulfo Castellanos</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="CSS/style.css">
 </head>
+<body>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", function(user) {
+                if (!user) {
+                    window.netlifyIdentity.on("login", function() { document.location.href = "/admin/"; });
+                    window.netlifyIdentity.on("recovery", function() { document.location.href = "/admin/"; });
+                }
+            });
+        }
+    </script>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="loader-overlay"></div>
+        <div class="loader-content">
+            <img src="público/logo/logo.png" class="loader-logo">
+            <h1>FARC-EP</h1>
+            <p>FRENTE 36</p>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <img src="público/logo/logo.png">
+            <div class="logo-text">
+                <h1>FARC-EP</h1>
+                <p>FRENTE 36</p>
+                <span>ARNULFO CASTELLANOS</span>
+            </div>
+        </div>
+        <button class="menu-btn" id="menu-btn">☰</button>
+        <nav class="nav" id="nav">
+            <a data-section="inicio">Inicio</a>
+            <a data-section="comunicados">Comunicados</a>
+            <a data-section="mujeres">Mujeres</a>
+            <a data-section="galeria">Galería</a>
+            <a data-section="Musica">Música</a>
+            <a data-section="Videos">Videos</a>
+            <a data-section="blog">Blog</a>
+            <a data-section="recomendados">Recomendados</a>
+        </nav>
+    </header>
+
+    <!-- INICIO -->
+    <section class="section active" id="inicio">
+        <div class="hero">
+            <video class="hero-video" autoplay muted loop playsinline><source src="público/uploads/intro-video.mp4" type="video/mp4"></video>
+            <img src="público/hero/hero.jpg" class="hero-img">
+            <div class="overlay"></div>
+            <div class="particles"></div>
+            <div class="hero-content">
+                <h1>FARC-EP FRENTE 36</h1>
+                <h2 class="sub-hero">ARNULFO CASTELLANOS</h2>
+                <p>Memoria histórica, territorio, cultura y procesos comunitarios.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMUNICADOS -->
+    <section class="section" id="comunicados">
+        <div class="section-bg"><img src="público/hero/bg-comunicados.jpg"><div class="section-overlay"></div></div>
+        <div class="internal-page"><h2 class="page-title">COMUNICADOS</h2><div class="grid" id="comunicados-container"></div></div>
+    </section>
+
+    <!-- MUJERES -->
+    <section class="section" id="mujeres">
+        <div class="section-bg"><img src="público/hero/bg-mujeres.jpg"><div class="section-overlay"></div></div>
+        <div class="internal-page"><h2 class="page-title">MUJERES</h2><div class="grid" id="mujeres-container"></div></div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="section" id="galeria">
+        <div class="section-bg"><img src="público/hero/bg-galeria.jpg"><div class="section-overlay"></div></div>
+        <div class="internal-page"><h2 class="page-title">GALERÍA</h2><div class="gallery-grid" id="galeria-container"></div></div>
+    </section>
+
+    <!-- MÚSICA -->
+    <section class="section" id="Musica">
+        <div class="section-bg"><img src="público/hero/bg-musica.jpg"><div class="section-overlay"></div></div>
+        <div class="internal-page"><h2 class="page-title">MÚSICA</h2><div class="music-grid" id="musica-container"></div></div>
+    </section>
+
+    <!-- VIDEOS -->
+    <section class="section" id="Videos">
+        <div class="section-bg"><img src="público/hero/bg-videos.jpg"><div class="section-overlay"></div></div>
+        <div class="internal-page"><h2 class="page-title">VIDEOS</h2><div class="video-grid" id="videos-container"></div></div>
+    </section>
+
+    <!-- BLOG -->
+    <section class="section" id="blog">
+        <div class="section-bg"><img src="público/hero/bg-blog.jpg"><div class="section-overlay"></div></div>
+        <div class="internal-page"><h2 class="page-title">BLOG</h2><div class="grid" id="blog-container"></div></div>
+    </section>
+
+    <!-- RECOMENDADOS -->
+    <section class="section" id="recomendados">
+        <div class="section-bg"><img src="público/hero/bg-recomendados.jpg"><div class="section-overlay"></div></div>
+        <div class="internal-page"><h2 class="page-title">RECOMENDADOS</h2><div class="grid" id="recomendados-container"></div></div>
+    </section>
+
+    <footer class="footer">© 2026 FARC-EP Frente 36 Arnulfo Castellanos</footer>
+    <button class="back-btn" onclick="goBack()">⬅</button>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+
 <body>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
