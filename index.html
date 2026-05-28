@@ -13,11 +13,19 @@
 <body>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-    <!-- HEADER: Intentamos con la ruta corta -->
+    <div id="loader">
+        <div class="loader-overlay"></div>
+        <div class="loader-content">
+            <img src="público/logo/logo.png" class="loader-logo">
+            <h1>FARC-EP</h1>
+            <p>FRENTE 36</p>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+        </div>
+    </div>
+
     <header class="header">
         <div class="logo">
-            <!-- Quitamos la carpeta para probar si el archivo está en la raíz o en una subcarpeta -->
-            <img src="logo.png" onerror="this.src='público/logo/logo.png'">
+            <img src="público/logo/logo.png">
             <div class="logo-text">
                 <h1>FARC-EP</h1>
                 <p>FRENTE 36</p>
@@ -37,10 +45,9 @@
         </nav>
     </header>
 
-    <!-- INICIO: Fondo -->
     <section class="section active" id="inicio">
         <div class="hero">
-            <img src="foto1.jpg" class="hero-img" onerror="this.src='público/imagenes/foto1.jpg'">
+            <img src="público/imagenes/foto1.jpg" class="hero-img">
             <div class="overlay"></div>
             <div class="hero-content">
                 <h1>FARC-EP FRENTE 36</h1>
@@ -50,15 +57,44 @@
         </div>
     </section>
 
-    <!-- Secciones reducidas para que no ocupen espacio -->
-    <section class="section" id="comunicados"><div class="internal-page"><h2 class="page-title">COMUNICADOS</h2></div></section>
-    <section class="section" id="mujeres"><div class="internal-page"><h2 class="page-title">MUJERES</h2></div></section>
-    <section class="section" id="galeria"><div class="internal-page"><h2 class="page-title">GALERÍA</h2></div></section>
-    <section class="section" id="Musica"><div class="internal-page"><h2 class="page-title">MÚSICA</h2></div></section>
-    <section class="section" id="Videos"><div class="internal-page"><h2 class="page-title">VIDEOS</h2></div></section>
-    <section class="section" id="blog"><div class="internal-page"><h2 class="page-title">BLOG</h2></div></section>
-    <section class="section" id="recomendados"><div class="internal-page"><h2 class="page-title">RECOMENDADOS</h2></div></section>
+    <!-- SECCIONES COMPLETAS -->
+    <section class="section" id="comunicados">
+        <div class="section-bg"><img src="público/imagenes/foto1.jpg"><div class="section-overlay"></div></div>
+        <div class="internal-page"><h2 class="page-title">COMUNICADOS</h2><div class="grid" id="comunicados-container"></div></div>
+    </section>
 
+    <section class="section" id="mujeres">
+        <div class="section-bg"><img src="público/imagenes/foto2.jpg"><div class="section-overlay"></div></div>
+        <div class="internal-page"><h2 class="page-title">MUJERES</h2><div class="grid" id="mujeres-container"></div></div>
+    </section>
+
+    <section class="section" id="galeria">
+        <div class="section-bg"><img src="público/imagenes/foto3.jpg"><div class="section-overlay"></div></div>
+        <div class="internal-page"><h2 class="page-title">GALERÍA</h2><div class="gallery-grid" id="galeria-container"></div></div>
+    </section>
+
+    <section class="section" id="Musica">
+        <div class="section-bg"><img src="público/imagenes/foto1.jpg"><div class="section-overlay"></div></div>
+        <div class="internal-page"><h2 class="page-title">MÚSICA</h2><div class="music-grid" id="musica-container"></div></div>
+    </section>
+
+    <section class="section" id="Videos">
+        <div class="section-bg"><img src="público/imagenes/foto2.jpg"><div class="section-overlay"></div></div>
+        <div class="internal-page"><h2 class="page-title">VIDEOS</h2><div class="video-grid" id="videos-container"></div></div>
+    </section>
+
+    <section class="section" id="blog">
+        <div class="section-bg"><img src="público/imagenes/foto3.jpg"><div class="section-overlay"></div></div>
+        <div class="internal-page"><h2 class="page-title">BLOG</h2><div class="grid" id="blog-container"></div></div>
+    </section>
+
+    <section class="section" id="recomendados">
+        <div class="section-bg"><img src="público/imagenes/foto1.jpg"><div class="section-overlay"></div></div>
+        <div class="internal-page"><h2 class="page-title">RECOMENDADOS</h2><div class="grid" id="recomendados-container"></div></div>
+    </section>
+
+    <footer class="footer">© 2026 FARC-EP Frente 36 Yeferson Martinez</footer>
+    <button class="back-btn" onclick="goBack()">⬅</button>
     <script src="js/app.js"></script>
 </body>
 </html>
