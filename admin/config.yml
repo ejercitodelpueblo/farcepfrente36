@@ -1,0 +1,17 @@
+
+backend:
+  name: github
+  repo: nuevojulio2025-hash/farcepfrente36
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "assets/uploads"
+
+collections:
+  - name: "musica"
+    label: "Música"
+    folder: "assets/uploads"
+    create: true
+    fields:
+      - {label: "Título de la Canción", name: "title", widget: "string"}
+      - {label: "Archivo de Audio (.mp3)", name: "audio_file", widget: "file"}
