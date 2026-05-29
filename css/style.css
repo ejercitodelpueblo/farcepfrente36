@@ -1394,4 +1394,10 @@ filter:blur(0px);
 .music-item audio{
   width:100%;
 }
- 
+ .hero-desc {
+    font-size: 14px;                 /* Lo hace más pequeño */
+    font-weight: 300;                /* Hace la letra más delgada y fina */
+    color: rgba(255, 255, 255, 0.8); /* Le baja un poquito el brillo al blanco para que resalten los títulos */
+    letter-spacing: 1px;             /* Separa un milímetro las letras para que se vea elegante */
+    margin-top: 12px;                /* Lo separa proporcionalmente del nombre Yeferson */
+}
