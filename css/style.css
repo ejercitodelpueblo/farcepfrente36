@@ -1311,7 +1311,15 @@ padding:
 
 font-size:12px;
 }
+.hero-desc{
 
+  font-size:11px;
+
+  line-height:1.5;
+
+  max-width:340px;
+
+}
 }
 #intro{
 position:fixed;
@@ -1391,13 +1399,24 @@ filter:blur(0px);
   margin-bottom:12px;
 }
 
-.music-item audio{
-  width:100%;
-}
- .hero-desc {
-    font-size: 14px;                 /* Lo hace más pequeño */
-    font-weight: 300;                /* Hace la letra más delgada y fina */
-    color: rgba(255, 255, 255, 0.8); /* Le baja un poquito el brillo al blanco para que resalten los títulos */
-    letter-spacing: 1px;             /* Separa un milímetro las letras para que se vea elegante */
-    margin-top: 12px;                /* Lo separa proporcionalmente del nombre Yeferson */
+.hero-desc{
+
+  font-size:12px;
+
+  font-weight:300;
+
+  color:rgba(255,255,255,.72);
+
+  letter-spacing:.8px;
+
+  line-height:1.6;
+
+  margin-top:8px;
+
+  max-width:520px;
+
+  margin-left:auto;
+
+  margin-right:auto;
+
 }
