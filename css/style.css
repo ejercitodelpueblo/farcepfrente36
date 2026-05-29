@@ -1311,16 +1311,17 @@ padding:
 
 font-size:12px;
 }
-.hero-desc{
+.hero-content .hero-desc{
 
-  font-size:11px;
+  font-size:10px !important;
 
-  line-height:1.5;
+  line-height:1.4;
 
-  max-width:340px;
+  max-width:320px;
 
 }
 }
+
 #intro{
 position:fixed;
 top:0;
@@ -1399,9 +1400,9 @@ filter:blur(0px);
   margin-bottom:12px;
 }
 
-.hero-desc{
+.hero-content .hero-desc{
 
-  font-size:12px;
+  font-size:11px !important;
 
   font-weight:300;
 
@@ -1409,9 +1410,9 @@ filter:blur(0px);
 
   letter-spacing:.8px;
 
-  line-height:1.6;
+  line-height:1.5;
 
-  margin-top:8px;
+  margin-top:6px;
 
   max-width:520px;
 
