@@ -1372,4 +1372,25 @@ transform:scale(1);
 filter:blur(0px);
 }
 
+}.music-list{
+  max-width:700px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+
+.music-item{
+  padding:20px 0;
+  border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.music-item h3{
+  color:#fff;
+  font-size:24px;
+  margin-bottom:12px;
+}
+
+.music-item audio{
+  width:100%;
 }
