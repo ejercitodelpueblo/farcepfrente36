@@ -63,15 +63,22 @@ height:74px;
 object-fit:contain;
 }
 
+/* LOGO HEADER */
+
 .logo-text h1{
-font-size:40px;
-font-family:'Cinzel',serif;
-color:#7ed48d;
+display:none;
 }
 
 .logo-text p{
+display:none;
+}
+
+.logo-text span{
+display:block;
 font-size:14px;
-letter-spacing:4px;
+letter-spacing:2px;
+color:#ffffff;
+font-weight:600;
 }
 
 .logo-text span{
