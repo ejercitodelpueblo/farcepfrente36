@@ -27,9 +27,114 @@ SCROLL
 width:8px;
 }
 
+::-webkit-scrollbar-track{
+background:#050505;
+}
+
 ::-webkit-scrollbar-thumb{
 background:#6bc17d;
 border-radius:999px;
+}
+
+/* =========================================================
+LOADER
+========================================================= */
+
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999999;
+transition:1s;
+}
+
+.loader-overlay{
+position:absolute;
+inset:0;
+background:
+radial-gradient(
+circle,
+rgba(126,212,141,.08),
+transparent 70%
+);
+animation:pulseBg 4s infinite;
+}
+
+.loader-content{
+position:relative;
+z-index:10;
+text-align:center;
+}
+
+.loader-logo{
+
+width:135px;
+
+height:135px;
+
+object-fit:contain;
+
+display:block;
+
+margin:auto;
+
+animation:logoPulse 2.5s infinite;
+
+}
+
+.loader-content h1{
+
+font-family:'Cinzel',serif;
+
+font-size:52px;
+
+color:#7ed48d;
+
+margin-top:12px;
+
+line-height:1;
+
+}
+
+.loader-content p{
+
+margin-top:8px;
+
+font-size:14px;
+
+letter-spacing:6px;
+
+color:#fff;
+
+}
+
+.loader-bar{
+
+width:280px;
+
+height:4px;
+
+background:#111;
+
+margin:24px auto 0;
+
+border-radius:999px;
+
+overflow:hidden;
+
+}
+
+.loader-progress{
+height:100%;
+width:0;
+background:#7ed48d;
+animation:loading 3s linear forwards;
 }
 
 /* =========================================================
@@ -63,34 +168,26 @@ height:74px;
 object-fit:contain;
 }
 
-/* LOGO */
-
-.logo-text{
-display:flex;
-flex-direction:column;
-justify-content:center;
-}
-
 .logo-text h1{
-font-size:34px;
+display:block;
+font-size:38px;
 font-family:'Cinzel',serif;
 line-height:1;
-margin:0;
 color:#7ed48d;
 }
 
 .logo-text p{
+display:block;
 font-size:13px;
 letter-spacing:4px;
 margin-top:4px;
-color:#fff;
 }
 
 .logo-text span{
+display:block;
 font-size:12px;
 margin-top:4px;
 color:#bdbdbd;
-letter-spacing:2px;
 }
 
 /* =========================================================
@@ -193,19 +290,18 @@ width:90%;
 
 .hero-content h1{
 font-family:'Cinzel',serif;
-font-size:70px;
-font-weight:700;
+font-size:68px;
 line-height:1.05;
 letter-spacing:3px;
 color:#7ed48d;
-margin-bottom:14px;
+margin-bottom:12px;
 }
 
 .sub-hero{
 font-family:'Cinzel',serif;
-font-size:26px;
-letter-spacing:5px;
-margin-bottom:14px;
+font-size:24px;
+letter-spacing:4px;
+margin-bottom:16px;
 color:#fff;
 }
 
@@ -215,7 +311,6 @@ line-height:1.8;
 max-width:900px;
 margin:18px auto 0;
 color:rgba(255,255,255,.92);
-font-weight:400;
 }
 
 /* =========================================================
@@ -278,26 +373,12 @@ gap:32px;
 background:rgba(10,10,10,.92);
 padding:22px;
 border-radius:22px;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
 }
 
 .card img{
 width:100%;
 border-radius:18px;
 margin-bottom:18px;
-}
-
-.card h3{
-font-size:22px;
-margin-bottom:12px;
-}
-
-.card p{
-line-height:1.8;
 }
 
 /* =========================================================
@@ -313,32 +394,6 @@ column-gap:18px;
 width:100%;
 margin-bottom:18px;
 border-radius:18px;
-}
-
-/* =========================================================
-MUSICA
-========================================================= */
-
-.music-list{
-max-width:700px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:25px;
-}
-
-.music-item{
-padding:20px 0;
-border-bottom:1px solid rgba(255,255,255,.15);
-}
-
-.music-item h3{
-font-size:24px;
-margin-bottom:12px;
-}
-
-.music-item audio{
-width:100%;
 }
 
 /* =========================================================
@@ -369,9 +424,8 @@ bottom:22px;
 background:rgba(0,0,0,.82);
 color:#fff;
 padding:14px 24px;
-border-radius:999px;
 border:none;
-cursor:pointer;
+border-radius:999px;
 }
 
 /* =========================================================
@@ -385,14 +439,32 @@ background:black;
 }
 
 /* =========================================================
+ANIMACIONES
+========================================================= */
+
+@keyframes loading{
+0%{width:0;}
+100%{width:100%;}
+}
+
+@keyframes logoPulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
+}
+
+@keyframes pulseBg{
+50%{
+transform:scale(1.2);
+opacity:.5;
+}
+}
+
+/* =========================================================
 RESPONSIVE
 ========================================================= */
 
 @media(max-width:1100px){
-
-.header{
-padding:0 20px;
-}
 
 .nav{
 display:none;
@@ -404,20 +476,7 @@ height:58px;
 }
 
 .logo-text h1{
-font-size:24px;
-}
-
-.logo-text p{
-font-size:11px;
-}
-
-.logo-text span{
-font-size:10px;
-}
-
-.grid,
-.video-grid{
-grid-template-columns:1fr;
+font-size:26px;
 }
 
 .hero-content h1{
@@ -426,7 +485,6 @@ font-size:42px;
 
 .sub-hero{
 font-size:16px;
-letter-spacing:2px;
 }
 
 .hero-desc{
@@ -438,6 +496,19 @@ padding:0 12px;
 
 .gallery-grid{
 columns:1;
+}
+
+.loader-logo{
+width:100px;
+height:100px;
+}
+
+.loader-content h1{
+font-size:34px;
+}
+
+.loader-bar{
+width:220px;
 }
 
 }
