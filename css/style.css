@@ -1,6 +1,7 @@
-/* =========================================================
+
+/* =========================
 RESET
-========================================================= */
+========================= */
 
 *{
 margin:0;
@@ -19,9 +20,9 @@ font-family:'Montserrat',sans-serif;
 color:#fff;
 }
 
-/* =========================================================
+/* =========================
 SCROLL
-========================================================= */
+========================= */
 
 ::-webkit-scrollbar{
 width:8px;
@@ -32,9 +33,9 @@ background:#6bc17d;
 border-radius:999px;
 }
 
-/* =========================================================
+/* =========================
 HEADER
-========================================================= */
+========================= */
 
 .header{
 width:100%;
@@ -63,32 +64,24 @@ height:74px;
 object-fit:contain;
 }
 
-/* LOGO HEADER */
+/* QUITAR TEXTO REPETIDO DEL HEADER */
 
-.logo-text h1{
-display:none;
-}
-
+.logo-text h1,
 .logo-text p{
 display:none;
 }
 
 .logo-text span{
 display:block;
-font-size:14px;
+font-size:15px;
+font-weight:700;
 letter-spacing:2px;
 color:#ffffff;
-font-weight:600;
 }
 
-.logo-text span{
-font-size:12px;
-color:#bdbdbd;
-}
-
-/* =========================================================
+/* =========================
 NAV
-========================================================= */
+========================= */
 
 .nav{
 display:flex;
@@ -109,9 +102,9 @@ transition:.3s;
 color:#7ed48d;
 }
 
-/* =========================================================
+/* =========================
 SECTIONS
-========================================================= */
+========================= */
 
 .section{
 display:none;
@@ -123,9 +116,9 @@ position:relative;
 display:block;
 }
 
-/* =========================================================
+/* =========================
 HERO
-========================================================= */
+========================= */
 
 .hero{
 height:100vh;
@@ -158,8 +151,8 @@ position:absolute;
 inset:0;
 background:linear-gradient(
 to bottom,
-rgba(0,0,0,.15),
-rgba(0,0,0,.92)
+rgba(0,0,0,.18),
+rgba(0,0,0,.95)
 );
 z-index:3;
 }
@@ -170,9 +163,9 @@ inset:0;
 z-index:4;
 }
 
-/* =========================================================
+/* =========================
 HERO CONTENT
-========================================================= */
+========================= */
 
 .hero-content{
 position:absolute;
@@ -184,38 +177,46 @@ z-index:20;
 width:90%;
 }
 
+/* TITULO PRINCIPAL */
+
 .hero-content h1{
-font-family:'Cinzel',serif;
-font-size:70px;
-font-weight:700;
-line-height:1.05;
+font-family:'Anton',sans-serif;
+font-size:78px;
+line-height:1;
 letter-spacing:3px;
 color:#7ed48d;
-margin-bottom:14px;
+margin-bottom:16px;
 text-shadow:
-0 0 14px rgba(126,212,141,.25),
-0 0 24px rgba(126,212,141,.15);
+0 0 16px rgba(126,212,141,.25);
 }
 
+/* YEFERSON */
+
 .sub-hero{
-font-family:'Cinzel',serif;
+font-family:'Montserrat',sans-serif;
 font-size:26px;
-letter-spacing:5px;
-margin-bottom:12px;
+font-weight:700;
+letter-spacing:4px;
+margin-bottom:18px;
 color:#fff;
 }
 
+/* SUBTEXTO */
+
 .hero-desc{
-font-size:18px;
+font-size:28px;
 line-height:1.7;
-max-width:650px;
+max-width:980px;
 margin:auto;
-color:rgba(255,255,255,.88);
+font-weight:500;
+color:#ffffff;
+text-shadow:
+0 0 14px rgba(0,0,0,.8);
 }
 
-/* =========================================================
-SECTION BG
-========================================================= */
+/* =========================
+SECTIONS BG
+========================= */
 
 .section-bg{
 position:absolute;
@@ -233,16 +234,17 @@ filter:brightness(.12);
 .section-overlay{
 position:absolute;
 inset:0;
-background:linear-gradient(
+background:
+linear-gradient(
 to bottom,
-rgba(0,0,0,.4),
-rgba(0,0,0,.95)
+rgba(0,0,0,.45),
+rgba(0,0,0,.96)
 );
 }
 
-/* =========================================================
+/* =========================
 INTERNAL
-========================================================= */
+========================= */
 
 .internal-page{
 position:relative;
@@ -255,12 +257,12 @@ font-size:60px;
 text-align:center;
 color:#7ed48d;
 margin-bottom:60px;
-font-family:'Cinzel',serif;
+font-family:'Anton',sans-serif;
 }
 
-/* =========================================================
+/* =========================
 GRID
-========================================================= */
+========================= */
 
 .grid,
 .video-grid{
@@ -273,11 +275,6 @@ gap:32px;
 background:rgba(10,10,10,.92);
 padding:22px;
 border-radius:22px;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
 }
 
 .card img{
@@ -295,9 +292,9 @@ margin-bottom:12px;
 line-height:1.8;
 }
 
-/* =========================================================
+/* =========================
 GALERIA
-========================================================= */
+========================= */
 
 .gallery-grid{
 columns:3 280px;
@@ -310,9 +307,9 @@ margin-bottom:18px;
 border-radius:18px;
 }
 
-/* =========================================================
+/* =========================
 MÚSICA
-========================================================= */
+========================= */
 
 .music-list{
 max-width:700px;
@@ -336,9 +333,9 @@ margin-bottom:12px;
 width:100%;
 }
 
-/* =========================================================
+/* =========================
 PLAYER
-========================================================= */
+========================= */
 
 .floating-player{
 position:fixed;
@@ -346,28 +343,15 @@ right:20px;
 bottom:20px;
 z-index:99999;
 display:flex;
-align-items:center;
 gap:14px;
 padding:14px 18px;
 border-radius:999px;
 background:rgba(0,0,0,.72);
 }
 
-#music-toggle{
-background:none;
-border:none;
-color:#fff;
-cursor:pointer;
-font-weight:700;
-}
-
-#volumeControl{
-width:110px;
-}
-
-/* =========================================================
+/* =========================
 BACK
-========================================================= */
+========================= */
 
 .back-btn{
 position:fixed;
@@ -379,12 +363,11 @@ padding:14px 24px;
 border-radius:999px;
 border:none;
 cursor:pointer;
-z-index:99999;
 }
 
-/* =========================================================
+/* =========================
 FOOTER
-========================================================= */
+========================= */
 
 .footer{
 text-align:center;
@@ -392,9 +375,9 @@ padding:38px;
 background:black;
 }
 
-/* =========================================================
+/* =========================
 RESPONSIVE
-========================================================= */
+========================= */
 
 @media(max-width:1100px){
 
@@ -404,10 +387,6 @@ padding:0 20px;
 
 .nav{
 display:none;
-}
-
-.logo-text h1{
-font-size:28px;
 }
 
 .grid,
@@ -420,14 +399,14 @@ font-size:42px;
 }
 
 .sub-hero{
-font-size:16px;
-letter-spacing:2px;
+font-size:18px;
 }
 
 .hero-desc{
-font-size:13px;
-max-width:300px;
-line-height:1.5;
+font-size:20px;
+max-width:92%;
+line-height:1.6;
+padding:0 12px;
 }
 
 .page-title{
@@ -436,11 +415,6 @@ font-size:42px;
 
 .gallery-grid{
 columns:1;
-}
-
-.floating-player{
-right:10px;
-bottom:10px;
 }
 
 }
