@@ -1,30 +1,20 @@
 
-
-```html
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>FARC-EP Frente 36 Yeferson Martinez</title>
 
-<!-- GOOGLE FONTS -->
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- CSS -->
-
 <link rel="stylesheet" href="css/style.css">
 
-</head>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 <script>
@@ -42,343 +32,268 @@ if (window.netlifyIdentity) {
   });
 }
 </script>
+
+</head>
+
 <body>
 
-<!-- =========================================================
-LOADER
-========================================================= -->
+<!-- LOADER -->
 
 <div id="loader">
 
-<div class="loader-overlay"></div>
+  <div class="loader-overlay"></div>
 
-<div class="loader-content">
+  <div class="loader-content">
 
-<img
-src="assets/logo/logo.png"
-class="loader-logo"
->
+    <img
+      src="assets/logo/logo.png"
+      class="loader-logo">
 
-<h1>FARC-EP</h1>
+    <h1>FARC-EP</h1>
 
-<p>FRENTE 36</p>
+    <p>FRENTE 36</p>
 
-<div class="loader-bar">
+    <div class="loader-bar">
+      <div class="loader-progress"></div>
+    </div>
 
-<div class="loader-progress"></div>
-
-</div>
-
-</div>
+  </div>
 
 </div>
 
-<!-- =========================================================
-INTRO MUSIC
-========================================================= -->
+<!-- INTRO MUSIC -->
 
 <audio id="introMusic" loop>
 
-<source
-src="assets/music/intro.mp3"
-type="audio/mpeg"
->
+  <source
+    src="assets/music/intro.mp3"
+    type="audio/mpeg">
 
 </audio>
 
-<!-- =========================================================
-HEADER
-========================================================= -->
+<!-- HEADER -->
 
 <header class="header">
 
-<div class="logo">
+  <div class="logo">
 
-<img src="assets/logo/logo.png">
+    <img src="assets/logo/logo.png">
 
-<div class="logo-text">
+    <div class="logo-text">
 
-<h1>FARC-EP</h1>
+      <h1>FARC-EP</h1>
 
-<p>FRENTE 36</p>
+      <p>FRENTE 36</p>
 
-<span>Yeferson Martinez</span>
+      <span>Yeferson Martinez</span>
 
-</div>
+    </div>
 
-</div>
+  </div>
 
-<button class="menu-btn" id="menu-btn">
+  <button class="menu-btn" id="menu-btn">
+    ☰
+  </button>
 
-☰
+  <nav class="nav" id="nav">
 
-</button>
+    <a data-section="inicio">Inicio</a>
+    <a data-section="comunicados">Comunicados</a>
+    <a data-section="mujeres">Mujeres</a>
+    <a data-section="galeria">Galería</a>
+    <a data-section="musica">Música</a>
+    <a data-section="videos">Videos</a>
 
-<nav class="nav" id="nav">
-
-<a data-section="inicio">Inicio</a>
-
-<a data-section="comunicados">Comunicados</a>
-
-<a data-section="mujeres">Mujeres</a>
-
-<a data-section="galeria">Galería</a>
-
-<a data-section="musica">Música</a>
-
-<a data-section="videos">Videos</a>
-
-<a data-section="blog">Blog</a>
-
-<a data-section="recomendados">Recomendados</a>
-
-</nav>
+  </nav>
 
 </header>
 
-<!-- =========================================================
-INICIO
-========================================================= -->
-<!-- =========================================================
-INICIO
-========================================================= -->
+<!-- INICIO -->
 
 <section class="section active" id="inicio">
 
-<div class="hero">
+  <div class="hero">
 
-<!-- VIDEO -->
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline>
+      <source src="assets/uploads/intro-video.mp4" type="video/mp4">
+    </video>
 
-<video
-class="hero-video"
-autoplay
-muted
-loop
-playsinline
->
+    <img
+      src="assets/hero/hero.jpg"
+      class="hero-img">
 
-<source
-src="assets/uploads/intro-video.mp4"
-type="video/mp4"
->
+    <div class="overlay"></div>
 
-</video>
+    <div class="particles"></div>
 
-<!-- IMAGEN -->
+    <!-- HERO CONTENT -->
 
-<img
-src="assets/hero/hero.jpg"
-class="hero-img"
->
+    <div class="hero-content">
 
-<!-- OVERLAY -->
+      <h1>FARC-EP FRENTE 36</h1>
 
-<div class="overlay"></div>
+      <h2 class="sub-hero">
+        Yeferson Martinez
+      </h2>
 
-<!-- PARTICLES -->
+      <p class="hero-desc">
+        Memoria histórica, territorio, lucha, cultura y procesos comunitarios.
+      </p>
 
-<div class="particles"></div>
+    </div>
 
-<!-- HERO CONTENT -->
-
-<div class="hero-content">
-
-<h1>
-
-FARC-EP FRENTE 36
-
-</h1>
-<div class="hero-content">
-
-  <h1>FARC-EP FRENTE 36</h1>
-
-  <h2 class="sub-hero">
-    Yeferson Martinez
-  </h2>
-
-  <p class="hero-desc">
-    Memoria histórica, territorio, lucha, cultura y procesos comunitarios.
-  </p>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
-<!-- =========================================================
-COMUNICADOS
-========================================================= -->
+<!-- COMUNICADOS -->
 
 <section class="section" id="comunicados">
 
-<div class="section-bg">
+  <div class="section-bg">
 
-<img src="assets/hero/bg-comunicados.jpg">
+    <img src="assets/hero/bg-comunicados.jpg">
 
-<div class="section-overlay"></div>
+    <div class="section-overlay"></div>
 
-</div>
+  </div>
 
-<div class="internal-page">
+  <div class="internal-page">
 
-<h2 class="page-title">
+    <h2 class="page-title">
+      COMUNICADOS
+    </h2>
 
-COMUNICADOS
+    <div class="grid">
 
-</h2>
+      <div class="card">
 
-<div class="grid">
+        <img src="assets/uploads/foto1.jpg">
 
-<div class="card">
+        <h3>Comunicado Oficial</h3>
 
-<img src="assets/uploads/foto1.jpg">
+        <p>
+          Publicaciones organizadas visualmente.
+        </p>
 
-<h3>Comunicado Oficial</h3>
+      </div>
 
-<p>
+      <div class="card">
 
-Publicaciones organizadas visualmente.
+        <img src="assets/uploads/foto2.jpg">
 
-</p>
+        <h3>Archivo Histórico</h3>
 
-</div>
+        <p>
+          Contenido documental multimedia.
+        </p>
 
-<div class="card">
+      </div>
 
-<img src="assets/uploads/foto2.jpg">
+      <div class="card">
 
-<h3>Archivo Histórico</h3>
+        <img src="assets/uploads/foto3.jpg">
 
-<p>
+        <h3>Declaraciones</h3>
 
-Contenido documental multimedia.
+        <p>
+          La voz del pueblo.
+        </p>
 
-</p>
+      </div>
 
-</div>
+    </div>
 
-<div class="card">
-
-<img src="assets/uploads/foto3.jpg">
-
-<h3>Declaraciones</h3>
-
-<p>
-
-la voz del pueblo.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
-<!-- =========================================================
-MUJERES
-========================================================= -->
+<!-- MUJERES -->
 
 <section class="section" id="mujeres">
 
-<div class="section-bg">
+  <div class="section-bg">
 
-<img src="assets/hero/bg-mujeres.jpg">
+    <img src="assets/hero/bg-mujeres.jpg">
 
-<div class="section-overlay"></div>
+    <div class="section-overlay"></div>
 
-</div>
+  </div>
 
-<div class="internal-page">
+  <div class="internal-page">
 
-<h2 class="page-title">
+    <h2 class="page-title">
+      MUJERES
+    </h2>
 
-MUJERES
+    <div class="grid">
 
-</h2>
+      <div class="card">
 
-<div class="grid">
+        <img src="assets/uploads/foto1.jpg">
 
-<div class="card">
+        <h3>Memoria Visual</h3>
 
-<img src="assets/uploads/foto1.jpg">
+        <p>
+          Archivo visual documental.
+        </p>
 
-<h3>Memoria Visual</h3>
+      </div>
 
-<p>
+      <div class="card">
 
-Archivo visual documental.
+        <img src="assets/uploads/foto2.jpg">
 
-</p>
+        <h3>Historia</h3>
 
-</div>
+        <p>
+          Registro multimedia histórico.
+        </p>
 
-<div class="card">
+      </div>
 
-<img src="assets/uploads/foto2.jpg">
+    </div>
 
-<h3>Historia</h3>
-
-<p>
-
-Registro multimedia histórico.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
-<!-- =========================================================
-GALERIA
-========================================================= -->
+<!-- GALERIA -->
 
 <section class="section" id="galeria">
 
-<div class="section-bg">
+  <div class="section-bg">
 
-<img src="assets/hero/bg-galeria.jpg">
+    <img src="assets/hero/bg-galeria.jpg">
 
-<div class="section-overlay"></div>
+    <div class="section-overlay"></div>
 
-</div>
+  </div>
 
-<div class="internal-page">
+  <div class="internal-page">
 
-<h2 class="page-title">
+    <h2 class="page-title">
+      GALERÍA
+    </h2>
 
-GALERÍA
+    <div class="gallery-grid">
 
-</h2>
+      <img src="assets/uploads/foto1.jpg">
+      <img src="assets/uploads/foto2.jpg">
+      <img src="assets/uploads/foto3.jpg">
 
-<div class="gallery-grid">
+    </div>
 
-<img src="assets/uploads/foto1.jpg">
-<img src="assets/uploads/foto2.jpg">
-<img src="assets/uploads/foto3.jpg">
-<img src="assets/uploads/foto1.jpg">
-<img src="assets/uploads/foto2.jpg">
-<img src="assets/uploads/foto3.jpg">
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
-<!-- =========================================================
-MUSICA
-========================================================= -->
-<!-- =========================================================
-MUSICA
-========================================================= -->
+<!-- MUSICA -->
 
 <section class="section" id="musica">
 
@@ -392,20 +307,30 @@ MUSICA
 
       <div class="music-item">
 
-        <h3>🎵 himno-farc-ep</h3>
+        <h3>🎵 Himno FARC-EP</h3>
 
         <audio controls preload="metadata">
 
-          <source src="assets/uploads/himno-farc-ep.mp3" type="audio/mpeg">
+          <source
+            src="assets/uploads/himno-farc-ep.mp3"
+            type="audio/mpeg">
+
         </audio>
-</audio>
+
       </div>
 
       <div class="music-item">
-        <h3>Sesenta y Dos</h3>
+
+        <h3>🎵 Sesenta y Dos</h3>
+
         <audio controls preload="metadata">
-          <source src="assets/uploads/Sesenta y Dos (1).mp3" type="audio/mpeg">
+
+          <source
+            src="assets/uploads/Sesenta y Dos (1).mp3"
+            type="audio/mpeg">
+
         </audio>
+
       </div>
 
       <div class="music-item">
@@ -428,10 +353,7 @@ MUSICA
 
 </section>
 
-
-<!-- =========================================================
-VIDEOS
-========================================================= -->
+<!-- VIDEOS -->
 
 <section class="section" id="videos">
 
@@ -481,48 +403,39 @@ VIDEOS
 
 </section>
 
-<!-- =========================================================
-FOOTER
-========================================================= -->
+<!-- FOOTER -->
 
 <footer class="footer">
 
-© 2026 FARC-EP Frente 36 Yeferson Martinez
+  © 2026 FARC-EP Frente 36 Yeferson Martinez
 
 </footer>
 
-<!-- =========================================================
-FLOATING PLAYER
-========================================================= -->
+<!-- FLOATING PLAYER -->
 
 <div class="floating-player">
 
-<button id="music-toggle">
+  <button id="music-toggle">
+    🔊 Música
+  </button>
 
-🔊 Música
-
-</button>
-
-<input
-type="range"
-id="volumeControl"
-min="0"
-max="1"
-step="0.1"
-value="0.5"
->
+  <input
+    type="range"
+    id="volumeControl"
+    min="0"
+    max="1"
+    step="0.1"
+    value="0.5">
 
 </div>
 
-<!-- =========================================================
-BACK BUTTON
-========================================================= -->
+<!-- BACK -->
 
 <button
-class="back-btn"
-onclick="goBack()">
+  class="back-btn"
+  onclick="goBack()">
 
-⬅
+  ⬅
 
 </button>
 
