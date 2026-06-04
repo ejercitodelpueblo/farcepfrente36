@@ -264,8 +264,27 @@ mediaAudios.forEach(audio => {
 HEADER EFECTO SCROLL
 ========================================================= */
 
-window.addEventListener("scroll", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
+  const loader = document.getElementById("loader");
+
+  setTimeout(() => {
+
+    if (loader) {
+
+      loader.style.opacity = "0";
+      loader.style.visibility = "hidden";
+      loader.style.pointerEvents = "none";
+
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 1000);
+
+    }
+
+  }, 3000);
+
+});
   const header =
   document.querySelector(".header");
 
