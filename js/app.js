@@ -1,3 +1,4 @@
+
 /* =========================================================
 LOADER CINEMATICO
 ========================================================= */
@@ -43,11 +44,8 @@ if (menuBtn && nav) {
 SECTIONS NAVIGATION
 ========================================================= */
 
-const links =
-document.querySelectorAll(".nav a");
-
-const sections =
-document.querySelectorAll(".section");
+const links = document.querySelectorAll(".nav a");
+const sections = document.querySelectorAll(".section");
 
 let sectionHistory = [];
 
@@ -55,15 +53,13 @@ links.forEach(link => {
 
   link.addEventListener("click", () => {
 
-    const current =
-    document.querySelector(".section.active");
+    const current = document.querySelector(".section.active");
 
     if (current) {
       sectionHistory.push(current.id);
     }
 
-    const target =
-    link.getAttribute("data-section");
+    const target = link.getAttribute("data-section");
 
     if (target) {
 
@@ -71,8 +67,7 @@ links.forEach(link => {
         section.classList.remove("active");
       });
 
-      const activeSection =
-      document.getElementById(target);
+      const activeSection = document.getElementById(target);
 
       if (activeSection) {
         activeSection.classList.add("active");
@@ -101,15 +96,13 @@ function goBack() {
 
   if (sectionHistory.length > 0) {
 
-    const previousSection =
-    sectionHistory.pop();
+    const previousSection = sectionHistory.pop();
 
     sections.forEach(section => {
       section.classList.remove("active");
     });
 
-    const previous =
-    document.getElementById(previousSection);
+    const previous = document.getElementById(previousSection);
 
     if (previous) {
 
@@ -128,8 +121,7 @@ function goBack() {
       section.classList.remove("active");
     });
 
-    const inicio =
-    document.getElementById("inicio");
+    const inicio = document.getElementById("inicio");
 
     if (inicio) {
       inicio.classList.add("active");
@@ -143,14 +135,9 @@ function goBack() {
 INTRO MUSIC
 ========================================================= */
 
-const music =
-document.getElementById("introMusic");
-
-const volumeControl =
-document.getElementById("volumeControl");
-
-const musicToggle =
-document.getElementById("music-toggle");
+const music = document.getElementById("introMusic");
+const volumeControl = document.getElementById("volumeControl");
+const musicToggle = document.getElementById("music-toggle");
 
 let started = false;
 
@@ -169,17 +156,8 @@ function startMusic() {
 
 }
 
-document.addEventListener(
-  "click",
-  startMusic,
-  { once:true }
-);
-
-document.addEventListener(
-  "scroll",
-  startMusic,
-  { once:true }
-);
+document.addEventListener("click", startMusic, { once:true });
+document.addEventListener("scroll", startMusic, { once:true });
 
 /* =========================================================
 CONTROL VOLUMEN
@@ -208,14 +186,12 @@ if (musicToggle && music) {
     if (music.paused) {
 
       music.play();
-      musicToggle.innerHTML =
-      "🔊 Música";
+      musicToggle.innerHTML = "🔊 Música";
 
     } else {
 
       music.pause();
-      musicToggle.innerHTML =
-      "🔇 Silenciada";
+      musicToggle.innerHTML = "🔇 Silenciada";
 
     }
 
@@ -227,8 +203,7 @@ if (musicToggle && music) {
 SILENCIAR INTRO EN AUDIOS
 ========================================================= */
 
-const mediaAudios =
-document.querySelectorAll(".music-item audio");
+const mediaAudios = document.querySelectorAll(".music-item audio");
 
 mediaAudios.forEach(audio => {
 
@@ -239,8 +214,7 @@ mediaAudios.forEach(audio => {
     }
 
     if (musicToggle) {
-      musicToggle.innerHTML =
-      "🔇 Intro Silenciado";
+      musicToggle.innerHTML = "🔇 Intro Silenciado";
     }
 
   });
@@ -252,8 +226,7 @@ mediaAudios.forEach(audio => {
     }
 
     if (musicToggle) {
-      musicToggle.innerHTML =
-      "🔊 Música";
+      musicToggle.innerHTML = "🔊 Música";
     }
 
   });
@@ -264,44 +237,20 @@ mediaAudios.forEach(audio => {
 HEADER EFECTO SCROLL
 ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("scroll", () => {
 
-  const loader = document.getElementById("loader");
-
-  setTimeout(() => {
-
-    if (loader) {
-
-      loader.style.opacity = "0";
-      loader.style.visibility = "hidden";
-      loader.style.pointerEvents = "none";
-
-      setTimeout(() => {
-        loader.style.display = "none";
-      }, 1000);
-
-    }
-
-  }, 3000);
-
-});
-  const header =
-  document.querySelector(".header");
+  const header = document.querySelector(".header");
 
   if (!header) return;
 
   if (window.scrollY > 40) {
 
-    header.style.background =
-    "rgba(0,0,0,.96)";
-
-    header.style.backdropFilter =
-    "blur(20px)";
+    header.style.background = "rgba(0,0,0,.96)";
+    header.style.backdropFilter = "blur(20px)";
 
   } else {
 
-    header.style.background =
-    "rgba(0,0,0,.92)";
+    header.style.background = "rgba(0,0,0,.92)";
 
   }
 
@@ -317,9 +266,7 @@ document.querySelectorAll(".gallery-grid img");
 galleryImages.forEach(img => {
 
   img.addEventListener("click", () => {
-
     img.classList.toggle("zoomed");
-
   });
 
 });
@@ -340,9 +287,7 @@ const preloadImages = [
 
 preloadImages.forEach(src => {
 
-  const img =
-  new Image();
-
+  const img = new Image();
   img.src = src;
 
 });
@@ -355,9 +300,3 @@ console.log(
   "%cFARC-EP Frente 36",
   "color:#7ed48d;font-size:20px;font-weight:bold;"
 );
-const menuBtn = document.getElementById("menu-btn");
-const nav = document.getElementById("nav");
-
-menuBtn.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});
