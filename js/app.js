@@ -336,3 +336,9 @@ console.log(
   "%cFARC-EP Frente 36",
   "color:#7ed48d;font-size:20px;font-weight:bold;"
 );
+const menuBtn = document.getElementById("menu-btn");
+const nav = document.getElementById("nav");
+
+menuBtn.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
