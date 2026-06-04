@@ -1,6 +1,5 @@
-
 /* =========================================================
-LOADER CINEMATICO
+LOADER
 ========================================================= */
 
 window.addEventListener("load", () => {
@@ -41,7 +40,7 @@ if (menuBtn && nav) {
 }
 
 /* =========================================================
-SECTIONS NAVIGATION
+SECTIONS
 ========================================================= */
 
 const links = document.querySelectorAll(".nav a");
@@ -61,28 +60,24 @@ links.forEach(link => {
 
     const target = link.getAttribute("data-section");
 
-    if (target) {
+    sections.forEach(section => {
+      section.classList.remove("active");
+    });
 
-      sections.forEach(section => {
-        section.classList.remove("active");
-      });
+    const activeSection = document.getElementById(target);
 
-      const activeSection = document.getElementById(target);
+    if (activeSection) {
+      activeSection.classList.add("active");
+    }
 
-      if (activeSection) {
-        activeSection.classList.add("active");
-      }
-
+    if (nav) {
+      nav.classList.remove("active");
     }
 
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
-
-    if (nav) {
-      nav.classList.remove("active");
-    }
 
   });
 
@@ -96,23 +91,16 @@ function goBack() {
 
   if (sectionHistory.length > 0) {
 
-    const previousSection = sectionHistory.pop();
+    const previous = document.getElementById(
+      sectionHistory.pop()
+    );
 
     sections.forEach(section => {
       section.classList.remove("active");
     });
 
-    const previous = document.getElementById(previousSection);
-
     if (previous) {
-
       previous.classList.add("active");
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-
     }
 
   } else {
@@ -132,7 +120,7 @@ function goBack() {
 }
 
 /* =========================================================
-INTRO MUSIC
+MUSICA
 ========================================================= */
 
 const music = document.getElementById("introMusic");
@@ -156,12 +144,8 @@ function startMusic() {
 
 }
 
-document.addEventListener("click", startMusic, { once:true });
-document.addEventListener("scroll", startMusic, { once:true });
-
-/* =========================================================
-CONTROL VOLUMEN
-========================================================= */
+document.addEventListener("click", startMusic, { once: true });
+document.addEventListener("touchstart", startMusic, { once: true });
 
 if (volumeControl) {
 
@@ -174,10 +158,6 @@ if (volumeControl) {
   });
 
 }
-
-/* =========================================================
-PLAY / PAUSE
-========================================================= */
 
 if (musicToggle && music) {
 
@@ -200,33 +180,24 @@ if (musicToggle && music) {
 }
 
 /* =========================================================
-SILENCIAR INTRO EN AUDIOS
+AUDIOS
 ========================================================= */
 
-const mediaAudios = document.querySelectorAll(".music-item audio");
+const mediaAudios =
+document.querySelectorAll(".music-item audio");
 
 mediaAudios.forEach(audio => {
 
   audio.addEventListener("play", () => {
 
-    if (music) {
-      music.pause();
-    }
-
-    if (musicToggle) {
-      musicToggle.innerHTML = "🔇 Intro Silenciado";
-    }
+    if (music) music.pause();
 
   });
 
   audio.addEventListener("pause", () => {
 
     if (music && started) {
-      music.play();
-    }
-
-    if (musicToggle) {
-      musicToggle.innerHTML = "🔊 Música";
+      music.play().catch(() => {});
     }
 
   });
@@ -234,30 +205,32 @@ mediaAudios.forEach(audio => {
 });
 
 /* =========================================================
-HEADER EFECTO SCROLL
+HEADER
 ========================================================= */
 
 window.addEventListener("scroll", () => {
 
-  const header = document.querySelector(".header");
+  const header =
+  document.querySelector(".header");
 
   if (!header) return;
 
   if (window.scrollY > 40) {
 
-    header.style.background = "rgba(0,0,0,.96)";
-    header.style.backdropFilter = "blur(20px)";
+    header.style.background =
+    "rgba(0,0,0,.96)";
 
   } else {
 
-    header.style.background = "rgba(0,0,0,.92)";
+    header.style.background =
+    "rgba(0,0,0,.92)";
 
   }
 
 });
 
 /* =========================================================
-GALERIA ZOOM
+GALERIA
 ========================================================= */
 
 const galleryImages =
@@ -275,28 +248,17 @@ galleryImages.forEach(img => {
 PRELOAD
 ========================================================= */
 
-const preloadImages = [
-
+[
   "assets/hero/hero.jpg",
   "assets/hero/bg-comunicados.jpg",
   "assets/hero/bg-mujeres.jpg",
   "assets/hero/bg-galeria.jpg",
   "assets/hero/bg-videos.jpg"
-
-];
-
-preloadImages.forEach(src => {
+].forEach(src => {
 
   const img = new Image();
   img.src = src;
 
 });
 
-/* =========================================================
-CONSOLE STYLE
-========================================================= */
-
-console.log(
-  "%cFARC-EP Frente 36",
-  "color:#7ed48d;font-size:20px;font-weight:bold;"
-);
+console.log("FARC-EP Frente 36");
