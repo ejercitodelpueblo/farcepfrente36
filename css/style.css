@@ -255,19 +255,13 @@ z-index:1;
 filter:brightness(.22);
 z-index:2;
 }
-@media(max-width:768px){
-
-.hero-img{
-object-fit:contain;
-background:#000;
-}
 
 .section-bg img{
 object-fit:contain;
 background:#000;
 }
 
-}
+
 .overlay{
 position:absolute;
 inset:0;
@@ -552,4 +546,25 @@ gap:20px;
 
 .nav.active{
 display:flex;
+}
+
+} /* =========================================================
+HERO MOVIL
+========================================================= */
+
+@media (max-width:768px){
+
+.hero{
+overflow-x:auto;
+overflow-y:hidden;
+}
+
+.hero-img{
+width:auto;
+height:100%;
+min-width:160%;
+object-fit:cover;
+object-position:center center;
+}
+
 }
