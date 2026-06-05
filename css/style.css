@@ -266,15 +266,8 @@ rgba(0,0,0,.92)
 );
 z-index:3;
 }
-@media (max-width:768px){
 
-.hero-img,
-.overlay{
-width:180%;
-height:100%;
-}
 
-}
 .particles{
 position:absolute;
 inset:0;
@@ -549,9 +542,6 @@ gap:20px;
 .nav.active{
 display:flex;
 }
-/* =========================================================
-MOVIL IMAGEN COMPLETA
-========================================================= */
 
 /* =========================================================
 MOVIL - IMAGEN DESLIZABLE
@@ -559,48 +549,39 @@ MOVIL - IMAGEN DESLIZABLE
 
 @media (max-width:768px){
 
-.hero{
-overflow-x:auto;
-overflow-y:hidden;
-}
+  .hero{
+    overflow-x:auto;
+    overflow-y:hidden;
+  }
 
-.hero-img{
-position:absolute;
-top:0;
-left:0;
-height:100%;
-width:auto;
-min-width:180%;
-object-fit:cover;
-}
+  .hero-img{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:auto;
+    min-width:180%;
+    object-fit:cover;
+    object-position:center center;
+  }
 
-.hero-content{
-position:fixed;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-z-index:20;
-pointer-events:none;
-}
+  .overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:180%;
+    height:100%;
+    z-index:3;
+  }
 
-}
-} /* =========================================================
-HERO MOVIL
-========================================================= */
-
-@media (max-width:768px){
-
-.hero{
-overflow-x:auto;
-overflow-y:hidden;
-}
-
-.hero-img{
-width:auto;
-height:100%;
-min-width:160%;
-object-fit:cover;
-object-position:center center;
-}
+  .hero-content{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+    z-index:20;
+    pointer-events:none;
+  }
 
 }
