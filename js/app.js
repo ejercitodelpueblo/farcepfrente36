@@ -262,3 +262,12 @@ PRELOAD
 });
 
 console.log("FARC-EP Frente 36");
+/* DESPLAZAR IMAGEN HERO EN MOVIL */
+
+if(window.innerWidth <= 768){
+
+const hero = document.querySelector(".hero");
+
+hero.scrollLeft = (hero.scrollWidth - hero.clientWidth)/2;
+
+}

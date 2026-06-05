@@ -545,6 +545,10 @@ display:flex;
 MOVIL IMAGEN COMPLETA
 ========================================================= */
 
+/* =========================================================
+MOVIL - IMAGEN DESLIZABLE
+========================================================= */
+
 @media (max-width:768px){
 
 .hero{
@@ -553,19 +557,22 @@ overflow-y:hidden;
 }
 
 .hero-img{
-width:auto;
+position:absolute;
+top:0;
+left:0;
 height:100%;
+width:auto;
 min-width:180%;
 object-fit:cover;
-object-position:center;
 }
 
-.section-bg img{
-width:auto;
-height:100%;
-min-width:180%;
-object-fit:cover;
-object-position:center;
+.hero-content{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+z-index:20;
+pointer-events:none;
 }
 
 }
