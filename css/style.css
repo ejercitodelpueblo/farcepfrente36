@@ -256,12 +256,6 @@ filter:brightness(.22);
 z-index:2;
 }
 
-.section-bg img{
-object-fit:contain;
-background:#000;
-}
-
-
 .overlay{
 position:absolute;
 inset:0;
@@ -547,7 +541,34 @@ gap:20px;
 .nav.active{
 display:flex;
 }
+/* =========================================================
+MOVIL IMAGEN COMPLETA
+========================================================= */
 
+@media (max-width:768px){
+
+.hero{
+overflow-x:auto;
+overflow-y:hidden;
+}
+
+.hero-img{
+width:auto;
+height:100%;
+min-width:180%;
+object-fit:cover;
+object-position:center;
+}
+
+.section-bg img{
+width:auto;
+height:100%;
+min-width:180%;
+object-fit:cover;
+object-position:center;
+}
+
+}
 } /* =========================================================
 HERO MOVIL
 ========================================================= */
