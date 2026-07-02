@@ -674,4 +674,135 @@ MOVIL - IMAGEN DESLIZABLE
 
 .blog-btn:hover{
     opacity:.9;
+}.video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+gap:30px;
+}
+
+.video-grid video{
+width:100%;
+border-radius:15px;
+display:block;
+}
+
+.video-grid .card{
+background:rgba(0,0,0,.7);
+padding:20px;
+border-radius:15px;
+}/* ==========================
+BLOG REVISTA
+========================== */
+
+.blog-grid{
+    max-width:1200px;
+    margin:auto;
+}
+
+.blog-card{
+    background:#111;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 40px rgba(0,0,0,.5);
+}
+
+.blog-card img{
+    width:100%;
+    height: 180px;px;
+    object-fit:cover;
+}
+
+.blog-info{
+    padding:40px;
+}
+
+.blog-date{
+    display:block;
+    color:#8d8d8d;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+.blog-info h3{
+    font-family: Georgia, serif;
+    font-size:42px;
+    line-height:1.2;
+    color:white;
+    margin-bottom:20px;
+}
+
+.blog-info p{
+    font-size:18px;
+    line-height:1.8;
+    color:#d0d0d0;
+}
+
+.blog-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 30px;
+    border-radius:10px;
+    background:#1d5f31;
+    text-decoration:none;
+    color:white;
+    font-weight:700;
+}/* ARTICULO INDIVIDUAL */
+
+.article-container{
+max-width:900px;
+margin:auto;
+padding:120px 40px;
+}
+
+.article-title{
+font-family:Georgia,serif;
+font-size:60px;
+line-height:1.1;
+margin-bottom:20px;
+color:white;
+}
+
+.article-meta{
+color:#999;
+margin-bottom:40px;
+font-size:15px;
+}
+
+.article-content{
+font-size:22px;
+line-height:2;
+color:#ddd;
+}
+
+.article-content p{
+margin-bottom:30px;
+}
+
+/* BOTON VOLVER */
+
+.back-home{
+position:fixed;
+top:20px;
+left:20px;
+background:#1d5f31;
+color:white;
+padding:12px 20px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+z-index:9999;
+}.article-image{
+    width:100%;
+    max-width:500px;
+    display:block;
+    margin:0 auto 30px;
+    border-radius:15px;
+}.article-title{
+    font-family: Georgia, serif;
+    font-size:42px;
+    line-height:1.2;
+    text-align:center;
+    margin-bottom:20px;
 }
