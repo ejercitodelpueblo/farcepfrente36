@@ -330,14 +330,6 @@ lightbox.style.display="none";
 
 }
 
-});const lightbox =
-document.getElementById("lightbox");
-
-const lightboxImg =
-document.getElementById("lightbox-img");
-
-const closeLightbox =
-document.getElementById("close-lightbox");
 
 document
 .querySelectorAll(".gallery-grid img")
