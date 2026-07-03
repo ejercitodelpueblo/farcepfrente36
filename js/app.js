@@ -56,7 +56,7 @@ links.forEach(link => {
 
    if(current && current.id !== target){
     sectionHistory.push(current.id);
-}story.push(current.id);
+
     }
 
     const target = link.getAttribute("data-section");
@@ -88,17 +88,6 @@ updateBackButton();
 BOTON VOLVER
 ========================================================= */
 
-function goBack() {
-
-  if (sectionHistory.length > 0) {
-
-    const previous = document.getElementById(
-      sectionHistory.pop()
-    );
-
-    sections.forEach(section => {
-      section.classList.remove("active");
-    });
 
 function goBack(){
 
