@@ -119,7 +119,6 @@ font-size:14px;
 letter-spacing:6px;
 
 color:#fff;
-
 }
 
 .loader-bar{
@@ -398,16 +397,23 @@ GALERIA
 ========================================================= */
 
 .gallery-grid{
-columns:3 280px;
-column-gap:18px;
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+gap:20px;
 }
 
 .gallery-grid img{
 width:100%;
-margin-bottom:18px;
-border-radius:18px;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+cursor:pointer;
+transition:.3s;
 }
 
+.gallery-grid img:hover{
+transform:scale(1.03);
+}
 /* =========================================================
 PLAYER
 ========================================================= */
@@ -607,7 +613,7 @@ MOVIL - IMAGEN DESLIZABLE
     left:0;
     height:100%;
     width:auto;
-    min-width:180%;
+    min-width:100%;
     object-fit:cover;
     object-position:center center;
   }
@@ -616,7 +622,7 @@ MOVIL - IMAGEN DESLIZABLE
     position:absolute;
     top:0;
     left:0;
-    width:180%;
+    width:100%;
     height:100%;
     z-index:3;
   }
@@ -681,7 +687,6 @@ MOVIL - IMAGEN DESLIZABLE
     transform:translateY(-5px);
 }
 
-}
 
 .blog-card img{
     width:100%;
@@ -823,4 +828,79 @@ border-radius:10px;
 text-decoration:none;
 font-weight:bold;
 z-index:9999;
+} .page-title{
+font-size:64px;
+text-align:center;
+margin-bottom:60px;
+color:#7ed48d;
+letter-spacing:4px;
+}
+
+.blog-grid{
+max-width:1200px;
+margin:auto;
+}
+
+.blog-card{
+background:#111;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 40px rgba(0,0,0,.5);
+}
+
+.blog-card img{
+width:100%;
+height:450px;
+object-fit:cover;
+}
+
+.blog-info{
+padding:40px;
+}
+
+.blog-info h3{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.blog-info p{
+font-size:18px;
+line-height:1.8;
+} .video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:30px;
+}
+
+.video-grid video{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+}#lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.95);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999999;
+}
+
+#lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+}
+
+#close-lightbox{
+position:absolute;
+top:20px;
+right:30px;
+font-size:40px;
+cursor:pointer;
+color:white;
 }
