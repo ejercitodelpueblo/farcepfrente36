@@ -42,7 +42,6 @@ if (menuBtn && nav) {
 /* =========================================================
 SECTIONS
 ========================================================= */
-
 const links = document.querySelectorAll(".nav a");
 const sections = document.querySelectorAll(".section");
 
@@ -50,37 +49,33 @@ let sectionHistory = [];
 
 links.forEach(link => {
 
-  link.addEventListener("click", () => {
+    link.addEventListener("click", () => {
 
-    const current = document.querySelector(".section.active");
+        const target = link.getAttribute("data-section");
+        const current = document.querySelector(".section.active");
 
-   if(current && current.id !== target){
-    sectionHistory.push(current.id);
+        if(current && current.id !== target){
+            sectionHistory.push(current.id);
+        }
 
-    }
+        sections.forEach(section=>{
+            section.classList.remove("active");
+        });
 
-    const target = link.getAttribute("data-section");
+        document.getElementById(target).classList.add("active");
 
-    sections.forEach(section => {
-      section.classList.remove("active");
+        updateBackButton();
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+        if(nav){
+            nav.classList.remove("active");
+        }
+
     });
-
-    const activeSection = document.getElementById(target);
-
-    if (activeSection) {
-      activeSection.classList.add("active");
-    }
-updateBackButton();
-    if (nav) {
-      nav.classList.remove("active");
-    }
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-
-  });
 
 });
 
@@ -88,26 +83,26 @@ updateBackButton();
 BOTON VOLVER
 ========================================================= */
 
-
 function goBack(){
+
+    if(sectionHistory.length===0){
+
+        sections.forEach(section=>{
+            section.classList.remove("active");
+        });
+
+        document.getElementById("inicio").classList.add("active");
+        updateBackButton();
+        return;
+    }
+
+    const previous = sectionHistory.pop();
 
     sections.forEach(section=>{
         section.classList.remove("active");
     });
 
-    if(sectionHistory.length>0){
-
-        const previous=document.getElementById(sectionHistory.pop());
-
-        if(previous){
-            previous.classList.add("active");
-        }
-
-    }else{
-
-        document.getElementById("inicio").classList.add("active");
-
-    }
+    document.getElementById(previous).classList.add("active");
 
     updateBackButton();
 
@@ -117,10 +112,6 @@ function goBack(){
     });
 
 }
-}
-
-}
-updateBackButton();
 
 /* =========================================================
 MUSICA
