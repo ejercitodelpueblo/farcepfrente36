@@ -88,20 +88,16 @@ animation:logoPulse 2.5s infinite;
 }
 
 .loader-content h1{
-
-font-family:'Cinzel',serif;
-
-font-size:52px;
-
-color:#7ed48d;
+    font-family:'Cinzel',serif;
+    font-size:52px;
+    color:#7ed48d;
+}
 
 .loader-content p{
-
-margin-top:8px;
-font-size:14px;
-letter-spacing:6px;
-color:#fff;
-
+    margin-top:8px;
+    font-size:14px;
+    letter-spacing:6px;
+    color:#fff;
 }
 
 
@@ -827,3 +823,4 @@ border-radius:10px;
 text-decoration:none;
 font-weight:bold;
 z-index:9999;
+}
