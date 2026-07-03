@@ -1,4 +1,5 @@
- window.addEventListener("load", () => {
+
+window.addEventListener("load", () => {
 
   const loader = document.getElementById("loader");
 
@@ -19,14 +20,8 @@
   }, 3000);
 
 });
-/* =========================================================
-LOADER
-========================================================= */
 
-
-/* =========================================================
-MENU MOBILE
-========================================================= */
+/* MENU MOBILE */
 
 const menuBtn = document.getElementById("menu-btn");
 const nav = document.getElementById("nav");
@@ -39,83 +34,86 @@ if (menuBtn && nav) {
 
 }
 
-/* =========================================================
-SECTIONS
-========================================================= */
-const links = document.querySelectorAll(".nav a");
+/* SECTIONS */
+
+const links = document.querySelectorAll(".nav a[data-section]");
 const sections = document.querySelectorAll(".section");
 
 let sectionHistory = [];
 
 links.forEach(link => {
 
-    link.addEventListener("click", () => {
+  link.addEventListener("click", () => {
 
-        const target = link.getAttribute("data-section");
-        const current = document.querySelector(".section.active");
+    const target = link.getAttribute("data-section");
+    const current = document.querySelector(".section.active");
 
-        if(current && current.id !== target){
-            sectionHistory.push(current.id);
-        }
-
-        sections.forEach(section=>{
-            section.classList.remove("active");
-        });
-
-        document.getElementById(target).classList.add("active");
-
-        updateBackButton();
-
-        window.scrollTo({
-            top:0,
-            behavior:"smooth"
-        });
-
-        if(nav){
-            nav.classList.remove("active");
-        }
-
-    });
-
-});
-
-/* =========================================================
-BOTON VOLVER
-========================================================= */
-
-function goBack(){
-
-    if(sectionHistory.length===0){
-
-        sections.forEach(section=>{
-            section.classList.remove("active");
-        });
-
-        document.getElementById("inicio").classList.add("active");
-        updateBackButton();
-        return;
+    if (current && current.id !== target) {
+      sectionHistory.push(current.id);
     }
 
-    const previous = sectionHistory.pop();
-
-    sections.forEach(section=>{
-        section.classList.remove("active");
+    sections.forEach(section => {
+      section.classList.remove("active");
     });
 
-    document.getElementById(previous).classList.add("active");
+    const targetSection = document.getElementById(target);
+
+    if (targetSection) {
+      targetSection.classList.add("active");
+    }
 
     updateBackButton();
 
     window.scrollTo({
-        top:0,
-        behavior:"smooth"
+      top: 0,
+      behavior: "smooth"
     });
+
+    if (nav) {
+      nav.classList.remove("active");
+    }
+
+  });
+
+});
+
+/* BOTON VOLVER */
+
+function goBack() {
+
+  if (sectionHistory.length === 0) {
+
+    sections.forEach(section => {
+      section.classList.remove("active");
+    });
+
+    document.getElementById("inicio").classList.add("active");
+
+    updateBackButton();
+    return;
+
+  }
+
+  const previous = sectionHistory.pop();
+
+  sections.forEach(section => {
+    section.classList.remove("active");
+  });
+
+  document.getElementById(previous).classList.add("active");
+
+  updateBackButton();
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 
 }
 
-/* =========================================================
-MUSICA
-========================================================= */
+window.goBack = goBack;
+
+/* MUSICA */
 
 const music = document.getElementById("introMusic");
 const volumeControl = document.getElementById("volumeControl");
@@ -173,12 +171,9 @@ if (musicToggle && music) {
 
 }
 
-/* =========================================================
-AUDIOS
-========================================================= */
+/* AUDIOS */
 
-const mediaAudios =
-document.querySelectorAll(".music-item audio");
+const mediaAudios = document.querySelectorAll(".music-item audio");
 
 mediaAudios.forEach(audio => {
 
@@ -198,49 +193,27 @@ mediaAudios.forEach(audio => {
 
 });
 
-/* =========================================================
-HEADER
-========================================================= */
+/* HEADER */
 
 window.addEventListener("scroll", () => {
 
-  const header =
-  document.querySelector(".header");
+  const header = document.querySelector(".header");
 
   if (!header) return;
 
   if (window.scrollY > 40) {
 
-    header.style.background =
-    "rgba(0,0,0,.96)";
+    header.style.background = "rgba(0,0,0,.96)";
 
   } else {
 
-    header.style.background =
-    "rgba(0,0,0,.92)";
+    header.style.background = "rgba(0,0,0,.92)";
 
   }
 
 });
 
-/* =========================================================
-GALERIA
-========================================================= */
-
-const galleryImages =
-document.querySelectorAll(".gallery-grid img");
-
-galleryImages.forEach(img => {
-
-  img.addEventListener("click", () => {
-    img.classList.toggle("zoomed");
-  });
-
-});
-
-/* =========================================================
-PRELOAD
-========================================================= */
+/* PRELOAD */
 
 [
   "assets/hero/hero.jpg",
@@ -255,47 +228,46 @@ PRELOAD
 
 });
 
-console.log("FARC-EP Frente 36");
-/* DESPLAZAR IMAGEN HERO EN MOVIL */
+/* HERO MOVIL */
 
-if(window.innerWidth <= 768){
+if (window.innerWidth <= 768) {
 
-const hero = document.querySelector(".hero");
+  const hero = document.querySelector(".hero");
 
-hero.scrollLeft = (hero.scrollWidth - hero.clientWidth)/2;
-
-
-
-}const back=document.querySelector(".back-btn");
-
-function updateBackButton(){
-
-    const active=document.querySelector(".section.active");
-
-    if(active.id==="inicio"){
-
-        back.style.display="none";
-
-    }else{
-
-        back.style.display="flex";
-
-    }
+  if (hero) {
+    hero.scrollLeft =
+      (hero.scrollWidth - hero.clientWidth) / 2;
+  }
 
 }
 
-document.querySelectorAll("[data-section]").forEach(link=>{
+/* BOTON VOLVER VISIBILIDAD */
 
-    link.addEventListener("click",()=>{
+const back = document.querySelector(".back-btn");
 
-        setTimeout(updateBackButton,50);
+function updateBackButton() {
 
-    });
+  if (!back) return;
 
-});
+  const active = document.querySelector(".section.active");
 
-updateBackButton();const lightbox =
-document.getElementById("lightbox");
+  if (!active) return;
+
+  if (active.id === "inicio") {
+
+    back.style.display = "none";
+
+  } else {
+
+    back.style.display = "flex";
+
+  }
+
+}
+
+updateBackButton();
+
+/* LIGHTBOX GALERIA */
 
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
@@ -303,17 +275,18 @@ const closeLightbox = document.getElementById("close-lightbox");
 
 if (lightbox && lightboxImg && closeLightbox) {
 
-  document.querySelectorAll(".gallery-grid img")
-  .forEach(img => {
+  document
+    .querySelectorAll(".gallery-grid img")
+    .forEach(img => {
 
-    img.addEventListener("click", () => {
+      img.addEventListener("click", () => {
 
-      lightbox.style.display = "flex";
-      lightboxImg.src = img.src;
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+
+      });
 
     });
-
-  });
 
   closeLightbox.addEventListener("click", () => {
 
@@ -321,7 +294,7 @@ if (lightbox && lightboxImg && closeLightbox) {
 
   });
 
-  lightbox.addEventListener("click", (e) => {
+  lightbox.addEventListener("click", e => {
 
     if (e.target === lightbox) {
       lightbox.style.display = "none";
@@ -330,3 +303,5 @@ if (lightbox && lightboxImg && closeLightbox) {
   });
 
 }
+
+console.log("FARC-EP Frente 36 cargado correctamente");
