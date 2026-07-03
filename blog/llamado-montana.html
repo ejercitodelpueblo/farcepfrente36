@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,51 +7,189 @@
 
 <title>El Llamado de la Montaña</title>
 
-<link rel="stylesheet" href="../css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
-.article-container{
-max-width:1000px;
-margin:auto;
-padding:120px 30px 80px;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-.article-image{
-width:100%;
-border-radius:20px;
-margin-bottom:40px;
-}
-
-.article-title{
-font-size:50px;
-text-align:center;
-margin-bottom:15px;
-color:#7ed48d;
-}
-
-.article-meta{
-text-align:center;
-margin-bottom:40px;
-color:#999;
-}
-
-.article-content{
-font-size:20px;
+body{
+background:#f2f2f2;
+font-family:'Inter',sans-serif;
+color:#333;
 line-height:1.9;
 }
+
+/* BOTON VOLVER */
 
 .back-home{
 position:fixed;
 top:20px;
 left:20px;
-background:#024f1e;
+background:#1d5f31;
 color:white;
+padding:12px 22px;
 text-decoration:none;
-padding:12px 24px;
 border-radius:10px;
-font-weight:bold;
+font-weight:600;
 z-index:9999;
+box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+/* CABECERA */
+
+.hero{
+background:linear-gradient(
+rgba(0,0,0,.75),
+rgba(0,0,0,.75)
+),
+url("../assets/uploads/montana.jpg");
+background-size:cover;
+background-position:center;
+padding:120px 20px;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:72px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+color:#ddd;
+}
+
+/* CONTENEDOR */
+
+.container{
+max-width:1100px;
+margin:-60px auto 80px;
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 15px 50px rgba(0,0,0,.15);
+}
+
+/* IMAGEN DESTACADA */
+
+.featured-image{
+background:#111;
+padding:50px;
+text-align:center;
+}
+
+.featured-image img{
+width:100%;
+max-width:300px;
+border-radius:20px;
+display:block;
+margin:auto;
+}
+
+/* CONTENIDO */
+
+.content{
+max-width:800px;
+margin:auto;
+padding:80px 60px;
+}
+
+.content h2{
+font-family:'Playfair Display',serif;
+font-size:42px;
+margin-bottom:25px;
+margin-top:50px;
+color:#111;
+}
+
+.content p{
+font-size:19px;
+line-height:1.9;
+margin-bottom:32px;
+text-align:justify;
+color:#444;
+}
+.content ul{
+padding-left:30px;
+margin-bottom:30px;
+}
+
+.content li{
+font-size:20px;
+margin-bottom:12px;
+}
+
+/* GALERIA */
+
+.gallery-title{
+font-family:'Playfair Display',serif;
+font-size:42px;
+margin-top:70px;
+margin-bottom:30px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:15px;
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+/* FOOTER */
+
+.footer{
+text-align:center;
+padding:40px;
+background:#111;
+color:#bbb;
+}
+
+/* MOVIL */
+
+@media(max-width:768px){
+
+.hero{
+padding:90px 20px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.content{
+padding:80px;
+max-width:900px;
+margin:auto;
+}
+
+.content p,
+.content li{
+font-size:18px;
+}
+
+.content h2,
+.gallery-title{
+font-size:30px;
+}
+
 }
 
 </style>
@@ -60,119 +197,135 @@ z-index:9999;
 </head>
 
 <body>
- <a href="javascript:history.back()" class="back-home">
-← Volver
-</a>
-<a href="../index.html" class="back-home">
-⬅ Volver al inicio
-</a>
 
-<div class="article-container">
+<button class="back-btn" onclick="goBack()">
+    ⬅
+</button>
 
-<img
-src="../assets/uploads/montana.jpg"
-class="article-image">
+<header class="hero">
 
-<h1 class="article-title">
-El Llamado de la Montaña
-</h1>
-
-<div class="article-meta">
-02 Julio 2026 • FARC-EP Frente 36
-</div>
-
-<div class="article-content">
+<h1>El Llamado de la Montaña</h1>
 
 <p>
-         "El Origen y Comienzo de las FARC-EP: 
-La Legítima Lucha del Pueblo Campesino por la Justicia"
-                   FARC-EP FRENTE 36
-Categoría: [Historia, Colombia, Resistencia Popular]
-tags: [FARC-EP, Lucha Campesina, Marquetalia, Reforma Agraria, Antiimperialismo]
- 
-# El Origen y Comienzo de las FARC-EP: La Insurgencia que Nació para Defender al Pueblo
+02 Julio 2026 • Farc-ep • Historia y Memoria
+</p>
 
-Las Fuerzas Armadas Revolucionarias de Colombia - Ejército del Pueblo (FARC-EP)** no fueron un grupo de "bandoleros" 
-como las élites siempre quisieron pintarlas. Surgieron como una **respuesta legítima y necesaria** del pueblo campesino ante 
-décadas de represión, despojo y abandono estatal. Las FARC-EP nacieron para trabajar **a favor del pueblo**, por la tierra, 
-la dignidad y la soberanía nacional.
+</header>
 
-EL BRUTAL CONTEXTO QUE LLEVO A LA LUCHA ARMADA
+<div class="container">
 
-Tras el asesinato de **Jorge Eliécer Gaitán** en 1948, la oligarquía desató "La Violencia": 
-una masacre sistemática contra el pueblo liberal y comunista. Miles de campesinos fueron asesinados, 
-sus tierras robadas y sus familias desplazadas.
+<div class="featured-image">
 
-En regiones como el sur del Tolima, los campesinos no se quedaron de brazos cruzados. Organizados 
-por el **Partido Comunista Colombiano**, crearon **autodefensas populares** para proteger sus vidas, 
-sus cosechas y su derecho a la tierra.
+<img src="../assets/uploads/montana.jpg" alt="El Llamado de la Montaña">
 
-Marquetalia 1964: El Ataque del Estado que Encendió la Chispa Revolucionaria
+</div>
 
-En mayo de 1964, el gobierno oligárquico de **Guillermo León Valencia**, con apoyo imperialista de Estados Unidos, 
-lanzó la **Operación Soberanía**: más de **16.000 soldados** contra una pacífica comunidad campesina de apenas
- **48 hombres armados** en Marquetalia.
+<div class="content">
 
-Los campesinos, liderados por el legendario **Manuel Marulanda Vélez (Tirofijo)**, resistieron heroicamente. 
-Este ataque injustificado contra familias que solo pedían escuelas, carreteras y tierra fue la gota que rebosó el vaso.
+<p>
+                    El Origen y Comienzo de las FARC-EP: 
+               La Insurgencia que Nació para Defender al Pueblo
 
-De las cenizas de Marquetalia nació la convicción: **el Estado nunca defendería al pueblo, así que
- el pueblo debía defenderse a sí mismo**.
-
-Fundación de las FARC-EP (1966): Un Ejército del Pueblo
-
-En 1966, en la Segunda Conferencia Guerrillera, se consolidaron oficialmente
- las **Fuerzas Armadas Revolucionarias de Colombia**. En 1982 adoptaron el nombre **FARC-EP**, 
-  enfatizando su carácter de **Ejército del Pueblo**.
-
+Las Fuerzas Armadas Revolucionarias de Colombia - Ejército del Pueblo (FARC-EP)
+no fueron un grupo de "bandoleros" como las élites siempre quisieron pintarlas. 
+Surgieron como una **respuesta legítima y necesaria** del pueblo campesino ante décadas 
+de represión, despojo y abandono estatal. Las FARC-EP nacieron para trabajar 
+**a favor del pueblo**, por la tierra, la dignidad y la soberanía nacional.
 
 
 </p>
 
 <p>
+El Brutal Contexto que Obligó a la Lucha Armada
+
+Tras el asesinato de **Jorge Eliécer Gaitán** en 1948, la oligarquía desató "La Violencia": una masacre sistemática 
+contra el pueblo liberal y comunista. Miles de campesinos fueron asesinados, sus tierras robadas y sus familias desplazadas.
+
+En regiones como el sur del Tolima, los campesinos no se quedaron de brazos cruzados. Organizados por el 
+**Partido Comunista Colombiano**, crearon **autodefensas populares** para proteger sus vidas,
+ sus cosechas y su derecho a la tierra.
+
+Marquetalia 1964: El Ataque del Estado que Encendió la Chispa Revolucionaria
+
+En mayo de 1964, el gobierno oligárquico de **Guillermo León Valencia**, con apoyo imperialista de Estados Unidos,
+ lanzó la **Operación Soberanía**: más de **16.000 soldados** contra una pacífica comunidad campesina de apenas 
+ **48 hombres armados** en Marquetalia.
+
+Los campesinos, liderados por el legendario **Manuel Marulanda Vélez (Tirofijo)**, 
+resistieron heroicamente. Este ataque injustificado contra familias que solo pedían 
+escuelas, carreteras y tierra fue la gota que rebosó el vaso.
+
+De las cenizas de Marquetalia nació la convicción: **el Estado nunca defendería al pueblo, 
+así que el pueblo debía defenderse a sí mismo**.
+
+
+</p>
+
+<h2>
+ FARC-EP (1966): Un Ejército del Pueblo
+</h2>
+
+<p>
+En 1966, en la Segunda Conferencia Guerrillera, se consolidaron oficialmente las
+ **Fuerzas Armadas Revolucionarias de Colombia**. En 1982 adoptaron el nombre **FARC-EP**,
+  enfatizando su carácter de **Ejército del Pueblo**.
+
 ¿Por qué lucharon las FARC-EP?
 
 Las FARC-EP se levantaron en armas por **razones justas y populares**:
 
-       - **Reforma Agraria Revolucionaria**: Acabar con el latifundio y distribuir la tierra a quien la trabaja.
-       - **Defensa del Campesino**: Frente a la violencia paramilitar, el Ejército y los terratenientes.
-       - **Antiimperialismo**: Rechazar el dominio de Estados Unidos y las multinacionales sobre los recursos colombianos.
-       - **Justicia Social**: Educación, salud, vivienda y dignidad para los más pobres.
-       - **Soberanía Nacional**: Construir una Colombia verdaderamente independiente y democrática.
+- **Reforma Agraria Revolucionaria**: Acabar con el latifundio y distribuir la tierra a quien la trabaja.
+- **Defensa del Campesino**: Frente a la violencia paramilitar, el Ejército y los terratenientes.
+- **Antiimperialismo**: Rechazar el dominio de Estados Unidos y las multinacionales sobre los recursos colombianos.
+- **Justicia Social**: Educación, salud, vivienda y dignidad para los más pobres.
+- **Soberanía Nacional**: Construir una Colombia verdaderamente independiente y democrática.
 
-Su lema y práctica siempre fue 
-**"Por el pueblo y con el pueblo"**. 
-En las zonas que controlaron, implementaron justicia popular, escuelas, atención médica y organización 
-                                    comunitaria, algo que el Estado
-                                    nunca había hecho.
+Su lema y práctica siempre fue **"Por el pueblo y con el pueblo"**. En las zonas que controlaron, 
+implementaron justicia popular, escuelas, atención médica y organización comunitaria, 
+algo que el Estado nunca había hecho.
 
-UN LEGADO DE RESISTENCIA
+Un Legado de Resistencia
 
-Aunque el conflicto fue doloroso y cobró muchas vidas de ambos lados, las FARC-EP pusieron en la agenda 
-nacional las **demandas históricas del pueblo colombiano**: la tierra para los campesinos y el fin de la 
-exclusión.
+Aunque el conflicto fue doloroso y cobró muchas vidas de ambos lados, las FARC-EP pusieron en la agenda nacional
+ las **demandas históricas del pueblo colombiano**: la tierra para los campesinos y el fin de la exclusión.
 
-Su lucha demostró que cuando el Estado reprime y margina, el pueblo tiene el derecho legítimoa la
-                                     **resistencia armada**.
-
-> "No fuimos nosotros los que iniciamos la violencia. La violencia la inició el Estado contra el pueblo.
- " — Manuel Marulanda Vélez
-
-
-                            **¡Viva la lucha del pueblo!**  
-                            **¡Hasta la victoria siempre!**
-
-*Este es el primer artículo del blog. Próximos temas: las conquistas sociales de las FARC-EP en el territorio, el proceso de paz y la continuidad de las banderas populares.*
-
-.
 </p>
 
-<p>
+<ul>
+<li>Nuestra lucha demostró que cuando el Estado reprime y margina, el pueblo tiene el derecho legítimo a la
+                                  **resistencia armada**. 1</li>
+<li>"No fuimos nosotros los que iniciamos la violencia. La violencia la inició el Estado contra el pueblo." 
+    — Manuel Marulanda Vélez 2</li>
+<li>                             ¡Viva la lucha del pueblo!**  
+                                 ¡Hasta la victoria siempre!**
+ 3</li>
+</ul>
 
+
+<h2 class="gallery-title">
+Galería
+</h2>
+
+<div class="gallery">
+
+<img src="../assets/uploads/montana.jpg" alt="Montaña">
+
+<img src="../assets/uploads/farc.jpg"
+alt="Mujeres">
 
 </div>
 
 </div>
 
-</body>
+</div>
+
+<footer class="footer">
+
+© 2026 Blog • Todos los derechos reservados
+
+</footer>
+
+</body><button class="back-btn" onclick="history.back()">
+⬅
+</button>
 </html>

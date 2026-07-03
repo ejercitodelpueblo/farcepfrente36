@@ -54,8 +54,9 @@ links.forEach(link => {
 
     const current = document.querySelector(".section.active");
 
-    if (current) {
-      sectionHistory.push(current.id);
+   if(current && current.id !== target){
+    sectionHistory.push(current.id);
+}story.push(current.id);
     }
 
     const target = link.getAttribute("data-section");
@@ -69,7 +70,7 @@ links.forEach(link => {
     if (activeSection) {
       activeSection.classList.add("active");
     }
-
+updateBackButton();
     if (nav) {
       nav.classList.remove("active");
     }
@@ -99,25 +100,38 @@ function goBack() {
       section.classList.remove("active");
     });
 
-    if (previous) {
-      previous.classList.add("active");
-    }
+function goBack(){
 
-  } else {
-
-    sections.forEach(section => {
-      section.classList.remove("active");
+    sections.forEach(section=>{
+        section.classList.remove("active");
     });
 
-    const inicio = document.getElementById("inicio");
+    if(sectionHistory.length>0){
 
-    if (inicio) {
-      inicio.classList.add("active");
+        const previous=document.getElementById(sectionHistory.pop());
+
+        if(previous){
+            previous.classList.add("active");
+        }
+
+    }else{
+
+        document.getElementById("inicio").classList.add("active");
+
     }
 
-  }
+    updateBackButton();
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
 
 }
+}
+
+}
+updateBackButton();
 
 /* =========================================================
 MUSICA
@@ -270,4 +284,34 @@ const hero = document.querySelector(".hero");
 
 hero.scrollLeft = (hero.scrollWidth - hero.clientWidth)/2;
 
+
+
+}const back=document.querySelector(".back-btn");
+
+function updateBackButton(){
+
+    const active=document.querySelector(".section.active");
+
+    if(active.id==="inicio"){
+
+        back.style.display="none";
+
+    }else{
+
+        back.style.display="flex";
+
+    }
+
 }
+
+document.querySelectorAll("[data-section]").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        setTimeout(updateBackButton,50);
+
+    });
+
+});
+
+updateBackButton();
